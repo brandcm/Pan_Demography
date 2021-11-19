@@ -1,0 +1,65 @@
+# (grep ^# null.lgo; pclgo null.lgo a2.legofit a2boot*.legofit; grep -v ^# null.lgo | egrep -v "\<free\>")
+# .lgo file
+# null
+# PCA calculated with gsl_linalg_SV_decomp
+# Fraction of variance:
+#      pc1      pc2      pc3      pc4      pc5      pc6      pc7
+#  0.58578  0.21592  0.15681  0.03395  0.00630  0.00080  0.00044
+param free [    -4,      4] pc1 = 0
+param free [    -2,      2] pc2 = 0
+param free [    -2,      2] pc3 = 0
+param free [    -2,      2] pc4 = 0
+param free [    -1,      1] pc5 = 0
+param free [  -0.5,    0.5] pc6 = 0
+param free [  -0.5,    0.5] pc7 = 0
+time constrained Tecnw = 36048.88039215685 + 144.5342037504274*pc1 -
+    34.67658534827526*pc2 - 80.60597593977843*pc3 -
+    92.33698512367587*pc4 + 246.2748195502332*pc5 +
+    7.835970863259565*pc6 - 38.55221160780193*pc7
+time constrained Tnw = 10717.58392156863 - 656.7865243548189*pc1 +
+    645.152003019195*pc2 - 842.4766603734492*pc3 -
+    344.7976132085653*pc4 + 250.2018268910413*pc5 -
+    683.0405003508542*pc6 + 1004.159355988413*pc7
+time constrained Tec = 22276.42156862745 - 718.9473530450921*pc1 -
+    1461.122086861742*pc2 - 324.1282593099684*pc3 -
+    428.4334794363592*pc4 + 52.93481028323362*pc5 +
+    1309.555743077145*pc6 + 927.0369204127882*pc7
+twoN constrained twoNec = 159988.1960784314 + 11063.49017117958*pc1 +
+    17858.52161180066*pc2 + 3306.39148902659*pc3 +
+    4379.066244739466*pc4 + 168.787378260662*pc5 +
+    19064.73515692631*pc6 + 12966.1639553308*pc7
+twoN constrained twoNnw = 123826.8235294118 + 4562.921527591108*pc1 -
+    3984.013960765707*pc2 + 4804.18940073428*pc3 +
+    2163.51962213638*pc4 + 377.4694838146483*pc5 -
+    4924.475833961139*pc6 + 6873.902801009744*pc7
+twoN constrained twoNecnw = 34922.24509803922 -
+    159.026897360996*pc1 + 13.39882264102072*pc2 +
+    75.98143378737385*pc3 + 226.7594834334616*pc4 +
+    203.1181550108446*pc5 + 18.7191054520244*pc6 -
+    8.889937105020408*pc7
+twoN constrained twoNbecnw = 75130.54901960786 +
+    120.3973223741972*pc1 - 78.4843815471542*pc2 -
+    285.1958689978734*pc3 + 255.988222116514*pc4 -
+    79.61855178578431*pc5 - 2.305830448073059*pc6 -
+    3.934942052671845*pc7
+time	fixed	zero = 0
+twoN	fixed	one = 1
+time	fixed	Tbecnw = 75200  # bonobo-chimpanzee split
+segment b	t=zero	twoN=one	samples=1	# paniscus
+segment e	t=zero	twoN=one	samples=1	# schweinfurthii
+segment c	t=zero	twoN=one	samples=1	# troglodytes
+segment n	t=zero	twoN=one	samples=1	# ellioti
+segment w	t=zero	twoN=one	samples=1	# verus
+segment ec	t=Tec	twoN=twoNec
+segment nw	t=Tnw	twoN=twoNnw
+segment ecnw	t=Tecnw	twoN=twoNecnw
+segment becnw	t=Tbecnw	twoN=twoNbecnw
+derive b from becnw
+derive e from ec
+derive c from ec
+derive n from nw
+derive w from nw
+derive ec from ecnw
+derive nw from ecnw
+derive ecnw from becnw
+

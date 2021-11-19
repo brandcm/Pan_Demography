@@ -1,0 +1,98 @@
+########################################
+# legofit: estimate population history #
+#       version 2.3.4-4-g53f8760       #
+########################################
+
+# Program was compiled: Sep 21 2021 14:36:42
+# Program was run: Wed Sep 22 10:57:09 2021
+
+# cmd: legofit -1 -d 0 -t 32 --ptsPerDim 3 --stateOut a1boot5.state --tol 3e-6 -S 5000 cd.lgo ../../boot/boot5.opf
+# Stage nOptItr nSimReps
+#     0    5000        0
+# algorithm          : deterministic
+# ignoring probs <=  : 0
+# Branch length floor: 0
+# DE strategy        : 2
+#    F               : 0.3
+#    CR              : 0.8
+#    tolerance       : 3e-06
+# nthreads           : 32
+# lgo input file     : cd.lgo
+# site pat input file: ../../boot/boot5.opf
+# free parameters    : 13
+# points in DE swarm : 39
+# output state file  : a1boot5.state
+# Including singleton site patterns.
+# cost function      : KL
+Initial parameter values
+Fixed:
+      zero = 0
+       one = 1
+    Tbecnw = 75200
+Free:
+     Tecnw = 23540
+       Tnw = 6420
+       Tec = 10000
+     twoNb = 10000
+     twoNe = 10000
+     twoNc = 10000
+     twoNn = 10000
+    twoNec = 10000
+    twoNnw = 10000
+  twoNecnw = 15000
+  twoNbecnw = 20000
+        m3 = 0.01
+        m4 = 0.01
+Constrained:
+        Tc = 3210
+        Td = 1605
+DiffEv reached_goal. cost=3.48115e-03 spread=2.84566e-06
+Fitted parameter values
+Free:
+     Tecnw = 35916.1
+       Tnw = 20968.4
+       Tec = 27761.6
+     twoNb = 102505
+     twoNe = 43249.3
+     twoNc = 7612.33
+     twoNn = 35324
+    twoNec = 79934.1
+    twoNnw = 55427
+  twoNecnw = 35491.4
+  twoNbecnw = 74128.7
+        m3 = 0.089314
+        m4 = 0.000761545
+Constrained:
+        Tc = 10484.2
+        Td = 5242.09
+#       SitePat  BranchLen
+              b 135484.8492988
+              e 53235.5237867
+              c 54441.3362825
+              n 48591.2569378
+              w 50252.6142403
+            b:e 2460.4759233
+            b:c 2613.6600278
+            b:n 1942.0341101
+            b:w 2121.2009038
+            e:c 10410.9695291
+            e:n 5944.9200713
+            e:w 4666.4993650
+            c:n 4742.8449761
+            c:w 5028.7227454
+            n:w 13215.3635244
+          b:e:c 2359.3458111
+          b:e:n 1226.6075035
+          b:e:w 1118.1458950
+          b:c:n 1119.2990691
+          b:c:w 1227.8690653
+          b:n:w 2357.5302315
+          e:c:n 6420.5215410
+          e:c:w 5751.7071755
+          e:n:w 7923.7822459
+          c:n:w 7515.2344180
+        b:e:c:n 2122.4624656
+        b:e:c:w 1943.1872842
+        b:e:n:w 2575.3032965
+        b:c:n:w 2462.2915029
+        e:c:n:w 54974.8104949

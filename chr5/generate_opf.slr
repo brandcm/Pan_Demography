@@ -1,0 +1,36 @@
+#!/bin/bash
+#SBATCH -J sitepat_chr5
+#SBATCH --account=rogersa
+#SBATCH --partition=notchpeak
+#SBATCH --time=36:00:00
+#SBATCH --nodes 1
+#SBATCH --ntasks 1
+#SBATCH -o pan_chr5.opf # stdout
+#SBATCH -e pan_chr5.err # stderr
+#SBATCH --mail-type=END,FAIL
+#SBATCH --mail-user=cbrand2@uoregon.edu
+
+
+# uncompress raf files
+gunzip -c ppn_chr5.raf.gz > ppn_chr5.raf
+gunzip -c pte_chr5.raf.gz > pte_chr5.raf
+gunzip -c pts_chr5.raf.gz > pts_chr5.raf
+gunzip -c ptt_chr5.raf.gz > ptt_chr5.raf
+gunzip -c ptv_chr5.raf.gz > ptv_chr5.raf
+gunzip -c hss_chr5.raf.gz > hss_chr5.raf
+
+echo "finished decompression" 1>&2
+
+# make directory for bootstraps
+#mkdir boot_chr5
+
+# create observed pattern frequency (.opf) file and bootstrap replicates
+sitepat -1 --bootfile boot_chr5/boot --bootreps 50 \
+	b=ppn_chr5.raf \
+	e=pts_chr5.raf \
+	c=ptt_chr5.raf \
+	n=pte_chr5.raf \
+	w=ptv_chr5.raf \
+	outgroup=hss_chr5.raf
+
+echo "finished sitepat" 1>&2

@@ -1,0 +1,98 @@
+########################################
+# legofit: estimate population history #
+#       version 2.3.4-4-g53f8760       #
+########################################
+
+# Program was compiled: Sep 21 2021 14:36:42
+# Program was run: Thu Sep 23 12:10:40 2021
+
+# cmd: legofit -1 -d 0 -t 32 --ptsPerDim 3 --tol 3e-6 -S 5000 ad.lgo ../../boot/boot31.opf --stateIn a1.state --stateIn a1boot0.state --stateIn a1boot1.state --stateIn a1boot10.state --stateIn a1boot11.state --stateIn a1boot12.state --stateIn a1boot13.state --stateIn a1boot14.state --stateIn a1boot15.state --stateIn a1boot16.state --stateIn a1boot17.state --stateIn a1boot18.state --stateIn a1boot19.state --stateIn a1boot2.state --stateIn a1boot20.state --stateIn a1boot21.state --stateIn a1boot22.state --stateIn a1boot23.state --stateIn a1boot24.state --stateIn a1boot25.state --stateIn a1boot26.state --stateIn a1boot27.state --stateIn a1boot28.state --stateIn a1boot29.state --stateIn a1boot3.state --stateIn a1boot30.state --stateIn a1boot31.state --stateIn a1boot32.state --stateIn a1boot33.state --stateIn a1boot34.state --stateIn a1boot35.state --stateIn a1boot36.state --stateIn a1boot37.state --stateIn a1boot38.state --stateIn a1boot39.state --stateIn a1boot4.state --stateIn a1boot40.state --stateIn a1boot41.state --stateIn a1boot42.state --stateIn a1boot43.state --stateIn a1boot44.state --stateIn a1boot45.state --stateIn a1boot46.state --stateIn a1boot47.state --stateIn a1boot48.state --stateIn a1boot49.state --stateIn a1boot5.state --stateIn a1boot6.state --stateIn a1boot7.state --stateIn a1boot8.state --stateIn a1boot9.state
+# Stage nOptItr nSimReps
+#     0    5000        0
+# algorithm          : deterministic
+# ignoring probs <=  : 0
+# Branch length floor: 0
+# DE strategy        : 2
+#    F               : 0.3
+#    CR              : 0.8
+#    tolerance       : 3e-06
+# nthreads           : 32
+# lgo input file     : ad.lgo
+# site pat input file: ../../boot/boot31.opf
+# free parameters    : 13
+# points in DE swarm : 39
+# input state file(s): a1.state a1boot0.state a1boot1.state a1boot10.state a1boot11.state a1boot12.state a1boot13.state a1boot14.state a1boot15.state a1boot16.state a1boot17.state a1boot18.state a1boot19.state a1boot2.state a1boot20.state a1boot21.state a1boot22.state a1boot23.state a1boot24.state a1boot25.state a1boot26.state a1boot27.state a1boot28.state a1boot29.state a1boot3.state a1boot30.state a1boot31.state a1boot32.state a1boot33.state a1boot34.state a1boot35.state a1boot36.state a1boot37.state a1boot38.state a1boot39.state a1boot4.state a1boot40.state a1boot41.state a1boot42.state a1boot43.state a1boot44.state a1boot45.state a1boot46.state a1boot47.state a1boot48.state a1boot49.state a1boot5.state a1boot6.state a1boot7.state a1boot8.state a1boot9.state
+# Including singleton site patterns.
+# cost function      : KL
+Initial parameter values
+Fixed:
+      zero = 0
+       one = 1
+    Tbecnw = 75200
+Free:
+   Tgbecnw = 597311
+     Tecnw = 27876.7
+       Tnw = 21968
+       Tec = 25245.8
+     twoNb = 125447
+     twoNc = 24072.6
+    twoNec = 28397.2
+    twoNnw = 31069.5
+  twoNecnw = 89695.9
+  twoNbecnw = 47948.5
+  twoNgbecnw = 222963
+         m = 0.0625476
+        m4 = 0.0204382
+Constrained:
+        Ta = 37600
+        Td = 12622.9
+DiffEv reached_goal. cost=2.02180e-03 spread=2.81819e-06
+Fitted parameter values
+Free:
+   Tgbecnw = 139526
+     Tecnw = 24858.6
+       Tnw = 21788.9
+       Tec = 19607
+     twoNb = 499994
+     twoNc = 57540.6
+    twoNec = 58059.5
+    twoNnw = 16183.7
+  twoNecnw = 86342.1
+  twoNbecnw = 23621.2
+  twoNgbecnw = 270037
+         m = 0.128398
+        m4 = 0.0270692
+Constrained:
+        Ta = 37600
+        Td = 9803.5
+#       SitePat  BranchLen
+              b 138448.2385511
+              e 54557.5102354
+              c 56077.1744459
+              n 51024.7433680
+              w 51024.7433680
+            b:e 2383.7658145
+            b:c 2904.9925992
+            b:n 2033.5105078
+            b:w 2033.5105078
+            e:c 11400.4538857
+            e:n 5863.4803664
+            e:w 5863.4803664
+            c:n 5644.4426975
+            c:w 5644.4426975
+            n:w 14010.8998859
+          b:e:c 2314.9633808
+          b:e:n 1243.0418153
+          b:e:w 1243.0418153
+          b:c:n 1251.0850816
+          b:c:w 1251.0850816
+          b:n:w 2281.9760124
+          e:c:n 5215.7383394
+          e:c:w 5215.7383394
+          e:n:w 7023.7300800
+          c:n:w 6357.0968756
+        b:e:c:n 2242.9983580
+        b:e:c:w 2242.9983580
+        b:e:n:w 3570.4671743
+        b:c:n:w 2618.1977667
+        e:c:n:w 57682.4649177

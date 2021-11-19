@@ -1,0 +1,91 @@
+# (grep ^# b.lgo; pclgo b.lgo a2.legofit a2boot*.legofit; grep -v ^# b.lgo | egrep -v "\<free\>")
+# .lgo file
+# b2
+# PCA calculated with gsl_linalg_SV_decomp
+# Fraction of variance:
+#      pc1      pc2      pc3      pc4      pc5      pc6      pc7      pc8
+#  0.37729  0.19279  0.17792  0.12602  0.05793  0.04162  0.01957  0.00536
+#      pc9
+#  0.00151
+param free [    -4,      4] pc1 = 0
+param free [    -2,      2] pc2 = 0
+param free [    -2,      2] pc3 = 0
+param free [    -2,      2] pc4 = 0
+param free [    -2,      2] pc5 = 0
+param free [    -2,      2] pc6 = 0
+param free [    -2,      2] pc7 = 0
+param free [    -1,      1] pc8 = 0
+param free [    -1,      1] pc9 = 0
+time constrained Tecnw = 30314.87058823529 + 174.6002393878106*pc1 -
+    78.83722220018116*pc2 + 14.03552158426527*pc3 +
+    125.0476899244455*pc4 + 18.63894086787853*pc5 +
+    226.5825233252791*pc6 - 237.6234243907699*pc7 -
+    28.75445917017874*pc8 + 15.42694924638634*pc9
+time constrained Tnw = 15063.57254901961 - 804.8775714024285*pc1 +
+    226.9478819517199*pc2 + 478.078975708627*pc3 +
+    424.0801265369872*pc4 + 684.9043141745169*pc5 +
+    283.5640741540199*pc6 - 161.4689593985665*pc7 -
+    69.72752236817598*pc8 - 1212.612365957704*pc9
+time constrained Tec = 1503.778196666667 - 504.5780738759319*pc1 -
+    746.8366770715724*pc2 - 782.3818318539663*pc3 +
+    214.5041985864737*pc4 + 214.6388614588382*pc5 -
+    182.589422140558*pc6 - 62.70743690309876*pc7 -
+    1184.131357812749*pc8 + 116.6740267618558*pc9
+twoN constrained twoNb = 180581.2803921569 - 4740.669014189445*pc1 +
+    49437.52602881614*pc2 - 43371.29377603568*pc3 +
+    11182.26113094016*pc4 - 12725.91943709911*pc5 +
+    53665.83976516958*pc6 + 34960.5919603967*pc7 -
+    10858.24546029592*pc8 + 541.3157626857867*pc9
+twoN constrained twoNec = 217689.4117647059 + 5212.960881347129*pc1 +
+    8455.135967529215*pc2 + 8758.684706865977*pc3 +
+    17.89695783639252*pc4 - 320.7175996010083*pc5 -
+    3080.943822758466*pc6 + 227.4174708815886*pc7 -
+    12796.41066704955*pc8 + 1385.643102779549*pc9
+twoN constrained twoNnw = 63835.71568627452 + 4548.406241562811*pc1 -
+    1008.313975441373*pc2 - 2631.054263219552*pc3 -
+    1766.161700488331*pc4 - 3045.486754618391*pc5 -
+    1586.398507253031*pc6 + 497.2070717512507*pc7 -
+    904.063549185109*pc8 - 6968.054235995742*pc9
+twoN constrained twoNecnw = 34082.17843137255 -
+    215.8432542996973*pc1 + 64.27610688228198*pc2 +
+    31.27646767127915*pc3 + 123.0549787124466*pc4 -
+    418.8014225396851*pc5 - 51.64278786293566*pc6 -
+    195.4772066698465*pc7 - 5.680052480731964*pc8 -
+    11.6037659318143*pc9
+twoN constrained twoNbecnw = 49039.99215686275 +
+    157.0835681033921*pc1 - 196.8128728437978*pc2 +
+    135.1067169524864*pc3 + 643.8396171336235*pc4 -
+    91.57626125427174*pc5 - 106.6611606382767*pc6 +
+    411.1698614645777*pc7 + 62.85787140958095*pc8 +
+    2.302152628349331*pc9
+mixFrac constrained m2 = 0.0003156654781372549 +
+    8.413534638789511e-05*pc1 + 0.0002751312055910944*pc2 -
+    0.0002672870606535387*pc3 + 0.0002225650679588581*pc4 +
+    0.000180554265988214*pc5 - 0.0003049787987460729*pc6 -
+    0.0002155671532327592*pc7 + 0.000100847637254523*pc8 +
+    2.167205521439325e-05*pc9
+time    fixed   zero = 0
+twoN    fixed   one = 1
+time    fixed   Tbecnw = 75200
+time	constrained	Tb = 0.5*(Tecnw + Tec)
+segment b	t=zero  twoN=one        samples=1	# paniscus
+segment b2	t=Tb	twoN=twoNb
+segment e	t=zero  twoN=one        samples=1	# schweinfurthii
+segment c	t=zero  twoN=one        samples=1	# troglodytes
+segment n	t=zero  twoN=one        samples=1	# ellioti
+segment w	t=zero  twoN=one        samples=1	# verus
+segment ec	t=Tec   twoN=twoNec
+segment	ec2	t=Tb	twoN=twoNec
+segment nw	t=Tnw   twoN=twoNnw
+segment ecnw    t=Tecnw twoN=twoNecnw
+segment becnw   t=Tbecnw	twoN=twoNbecnw
+mix ec from ec2 + m2*b2
+derive b from b2
+derive b2 from becnw
+derive e from ec
+derive c from ec
+derive n from nw
+derive w from nw
+derive ec2 from ecnw
+derive nw from ecnw
+derive ecnw from becnw

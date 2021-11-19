@@ -1,0 +1,96 @@
+########################################
+# legofit: estimate population history #
+#       version 2.3.4-4-g53f8760       #
+########################################
+
+# Program was compiled: Sep 21 2021 14:36:42
+# Program was run: Sat Oct 30 12:12:09 2021
+
+# cmd: legofit -1 -d 0 -t 32 --ptsPerDim 3 --stateOut a1boot41.state --tol 3e-6 -S 5000 be.lgo sim41.opf
+# Stage nOptItr nSimReps
+#     0    5000        0
+# algorithm          : deterministic
+# ignoring probs <=  : 0
+# Branch length floor: 0
+# DE strategy        : 2
+#    F               : 0.3
+#    CR              : 0.8
+#    tolerance       : 3e-06
+# nthreads           : 32
+# lgo input file     : be.lgo
+# site pat input file: sim41.opf
+# free parameters    : 12
+# points in DE swarm : 36
+# output state file  : a1boot41.state
+# Including singleton site patterns.
+# cost function      : KL
+Initial parameter values
+Fixed:
+      zero = 0
+       one = 1
+    Tbecnw = 75200
+Free:
+     Tecnw = 23540
+       Tnw = 10000
+       Tec = 6420
+     twoNb = 10000
+     twoNe = 10000
+     twoNw = 10000
+    twoNec = 10000
+    twoNnw = 10000
+  twoNecnw = 15000
+  twoNbecnw = 20000
+        m2 = 0.01
+        m5 = 0.01
+Constrained:
+        Tb = 14980
+        Te = 3210
+DiffEv reached_goal. cost=2.97273e-04 spread=2.59045e-06
+Fitted parameter values
+Free:
+     Tecnw = 32428.9
+       Tnw = 21560.3
+       Tec = 23431.3
+     twoNb = 195421
+     twoNe = 80711.1
+     twoNw = 134259
+    twoNec = 68971.1
+    twoNnw = 44193.7
+  twoNecnw = 38601
+  twoNbecnw = 68051.6
+        m2 = 0.00283174
+        m5 = 0.149103
+Constrained:
+        Tb = 27930.1
+        Te = 11715.6
+#       SitePat  BranchLen
+              b 130535.0862342
+              e 49679.3138939
+              c 51998.0192425
+              n 47174.4335596
+              w 46797.2743061
+            b:e 2213.6875087
+            b:c 2500.5534606
+            b:n 1872.4321653
+            b:w 1841.5771740
+            e:c 10584.6042785
+            e:n 5180.4311987
+            e:w 5557.5904522
+            c:n 4877.4422731
+            c:w 4763.8731679
+            n:w 12713.6770030
+          b:e:c 2144.9917786
+          b:e:n 1054.4481384
+          b:e:w 1085.3031298
+          b:c:n 1085.5875915
+          b:c:w 1054.6950320
+          b:n:w 2137.4249600
+          e:c:n 5895.6340559
+          e:c:w 6009.2031611
+          e:n:w 8343.5207363
+          c:n:w 7113.1177656
+        b:e:c:n 1844.8563956
+        b:e:c:w 1875.7489551
+        b:e:n:w 2455.3213149
+        b:c:n:w 2176.3278395
+        e:c:n:w 51953.3866808

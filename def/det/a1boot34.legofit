@@ -1,0 +1,102 @@
+########################################
+# legofit: estimate population history #
+#       version 2.3.4-4-g53f8760       #
+########################################
+
+# Program was compiled: Sep 21 2021 14:36:42
+# Program was run: Wed Sep 22 09:57:39 2021
+
+# cmd: legofit -1 -d 0 -t 32 --ptsPerDim 3 --stateOut a1boot34.state --tol 3e-6 -S 5000 def.lgo ../../boot/boot34.opf
+# Stage nOptItr nSimReps
+#     0    5000        0
+# algorithm          : deterministic
+# ignoring probs <=  : 0
+# Branch length floor: 0
+# DE strategy        : 2
+#    F               : 0.3
+#    CR              : 0.8
+#    tolerance       : 3e-06
+# nthreads           : 32
+# lgo input file     : def.lgo
+# site pat input file: ../../boot/boot34.opf
+# free parameters    : 14
+# points in DE swarm : 42
+# output state file  : a1boot34.state
+# Including singleton site patterns.
+# cost function      : KL
+Initial parameter values
+Fixed:
+      zero = 0
+       one = 1
+    Tbecnw = 75200
+Free:
+     Tecnw = 23540
+       Tnw = 6420
+       Tec = 10000
+     twoNb = 10000
+     twoNe = 10000
+     twoNc = 10000
+     twoNw = 10000
+    twoNec = 10000
+    twoNnw = 10000
+  twoNecnw = 15000
+  twoNbecnw = 20000
+        m4 = 0.01
+        m5 = 0.01
+        m6 = 0.01
+Constrained:
+        Td = 5000
+        Te = 2500
+        Tf = 1250
+DiffEv reached_goal. cost=3.57242e-03 spread=2.95516e-06
+Fitted parameter values
+Free:
+     Tecnw = 35485.6
+       Tnw = 19987.5
+       Tec = 21359.6
+     twoNb = 215692
+     twoNe = 30350.1
+     twoNc = 112336
+     twoNw = 119342
+    twoNec = 127989
+    twoNnw = 63184
+  twoNecnw = 35922
+  twoNbecnw = 73185.9
+        m4 = 0.000196531
+        m5 = 0.110644
+        m6 = 5.03313e-05
+Constrained:
+        Td = 10679.8
+        Te = 5339.89
+        Tf = 2669.95
+#       SitePat  BranchLen
+              b 134761.3565197
+              e 52208.8529170
+              c 54230.3346353
+              n 49205.8893252
+              w 48671.4015042
+            b:e 2382.6664052
+            b:c 2624.5296835
+            b:n 2017.0942879
+            b:w 1976.6985114
+            e:c 10583.3045405
+            e:n 5108.6355271
+            e:w 5642.7558746
+            c:n 4925.6925066
+            c:w 4787.2156948
+            n:w 13046.9565337
+          b:e:c 2298.5575199
+          b:e:n 1142.1722261
+          b:e:w 1182.5250451
+          b:c:n 1182.6876203
+          b:c:w 1142.3306984
+          b:n:w 2298.3196754
+          e:c:n 5932.4491218
+          e:c:w 6071.2934071
+          e:n:w 8316.1060091
+          c:n:w 7327.6683737
+        b:e:c:n 1976.8569836
+        b:e:c:w 2017.2568631
+        b:e:n:w 2619.6494580
+        b:c:n:w 2382.9042498
+        e:c:n:w 54522.5238490

@@ -1,0 +1,96 @@
+########################################
+# legofit: estimate population history #
+#      version 2.3.2-28-g814fc8d       #
+########################################
+
+# Program was compiled: Sep  5 2021 18:47:56
+# Program was run: Thu Sep  9 12:29:09 2021
+
+# cmd: legofit -1 -d 0 -t 32 --ptsPerDim 3 --stateOut a1boot23.state --tol 3e-6 -S 5000 ab.lgo ../../boot/boot23.opf
+# Stage nOptItr nSimReps
+#     0    5000        0
+# algorithm          : deterministic
+# ignoring probs <=  : 0
+# Branch length floor: 0
+# DE strategy        : 2
+#    F               : 0.3
+#    CR              : 0.8
+#    tolerance       : 3e-06
+# nthreads           : 32
+# lgo input file     : ab.lgo
+# site pat input file: ../../boot/boot23.opf
+# free parameters    : 12
+# points in DE swarm : 36
+# output state file  : a1boot23.state
+# Including singleton site patterns.
+# cost function      : KL
+Initial parameter values
+Fixed:
+      zero = 0
+       one = 1
+    Tbecnw = 75200
+Free:
+   Tgbecnw = 140000
+     Tecnw = 23540
+       Tnw = 6420
+       Tec = 10000
+     twoNb = 10000
+    twoNec = 10000
+    twoNnw = 10000
+  twoNecnw = 15000
+  twoNbecnw = 20000
+  twoNgbecnw = 40000
+         m = 0.026
+        m2 = 0.01
+Constrained:
+        Tb = 16770
+        Ta = 45985
+DiffEv reached_goal. cost=2.43744e-03 spread=2.96726e-06
+Fitted parameter values
+Free:
+   Tgbecnw = 470904
+     Tecnw = 29419.1
+       Tnw = 18506.2
+       Tec = 22242.3
+     twoNb = 146608
+    twoNec = 71163.1
+    twoNnw = 61169.4
+  twoNecnw = 81251.5
+  twoNbecnw = 48264
+  twoNgbecnw = 285415
+         m = 0.0673571
+        m2 = 0.0204445
+Constrained:
+        Tb = 25830.7
+        Ta = 50515.4
+#       SitePat  BranchLen
+              b 150265.6351150
+              e 59996.3732159
+              c 59996.3732159
+              n 55614.0955327
+              w 55614.0955327
+            b:e 3129.4405308
+            b:c 3129.4405308
+            b:n 2255.7239251
+            b:w 2255.7239251
+            e:c 12361.1083611
+            e:n 6126.1542754
+            e:w 6126.1542754
+            c:n 6126.1542754
+            c:w 6126.1542754
+            n:w 15146.6375114
+          b:e:c 2466.7062991
+          b:e:n 1308.1034895
+          b:e:w 1308.1034895
+          b:c:n 1308.1034895
+          b:c:w 1308.1034895
+          b:n:w 2428.3955273
+          e:c:n 5770.4251811
+          e:c:w 5770.4251811
+          e:n:w 7284.3599836
+          c:n:w 7284.3599836
+        b:e:c:n 2288.9289219
+        b:e:c:w 2288.9289219
+        b:e:n:w 3283.7701095
+        b:c:n:w 3283.7701095
+        e:c:n:w 62799.8957111

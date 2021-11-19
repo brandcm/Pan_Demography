@@ -1,0 +1,104 @@
+# (grep ^# c.lgo; pclgo c.lgo a2.legofit a2boot*.legofit; grep -v ^# c.lgo | egrep -v "\<free\>")
+# .lgo file
+# c
+# PCA calculated with gsl_linalg_SV_decomp
+# Fraction of variance:
+#      pc1      pc2      pc3      pc4      pc5      pc6      pc7      pc8
+#  0.46604  0.16598  0.12710  0.10220  0.06606  0.03993  0.02218  0.00768
+#      pc9     pc10
+#  0.00265  0.00019
+param free [    -4,      4] pc1 = 0
+param free [    -2,      2] pc2 = 0
+param free [    -2,      2] pc3 = 0
+param free [    -2,      2] pc4 = 0
+param free [    -2,      2] pc5 = 0
+param free [    -2,      2] pc6 = 0
+param free [    -2,      2] pc7 = 0
+param free [    -1,      1] pc8 = 0
+param free [    -1,      1] pc9 = 0
+param free [  -0.5,    0.5] pc10 = 0
+time constrained Tecnw = 33824.1 + 132.9129441651219*pc1 -
+    168.0071574352699*pc2 - 98.18116559870266*pc3 +
+    106.9350479726235*pc4 - 11.22498740709213*pc5 +
+    38.99394544648707*pc6 + 259.3770572748118*pc7 +
+    188.0426134696987*pc8 + 14.18695412647873*pc9 +
+    0.944694891181035*pc10
+time constrained Tnw = 11476.7994117647 - 897.6768819123632*pc1 -
+    140.617327977209*pc2 - 464.9858672614466*pc3 -
+    38.04174930982369*pc4 + 343.381090310429*pc5 +
+    219.0248260668535*pc6 - 170.7770346419475*pc7 +
+    450.5489489388521*pc8 + 732.9999725316774*pc9 -
+    1491.154746909933*pc10
+time constrained Tec = 6109.07137254902 - 476.1814834803324*pc1 -
+    126.5073258999657*pc2 - 95.29575787594557*pc3 +
+    19.79619460076459*pc4 + 37.56338984759445*pc5 +
+    153.8726039955451*pc6 - 128.7722740686488*pc7 +
+    268.5310230590591*pc8 + 509.2001092086628*pc9 +
+    705.2428286463345*pc10
+twoN constrained twoNe = 7512.579176470591 - 573.0044469409135*pc1 -
+    1636.581290953635*pc2 + 3323.78961806742*pc3 +
+    426.6420249276697*pc4 - 2901.439045587391*pc5 +
+    647.6857797486911*pc6 - 869.6774587475545*pc7 +
+    1349.323876394878*pc8 - 238.0489191050922*pc9 -
+    730.7848987699888*pc10
+twoN constrained twoNn = 71870.77176470592 + 1690.216551629286*pc1 -
+    17393.58827542436*pc2 + 19626.48944161809*pc3 -
+    39048.77696623404*pc4 + 23768.16766722276*pc5 +
+    8504.107434346533*pc6 + 11921.4853845*pc7 -
+    1119.85298545856*pc8 + 604.4183648462358*pc9 +
+    814.629918526637*pc10
+twoN constrained twoNec = 168994.1960784314 + 3722.733417340085*pc1 +
+    62.73398521466328*pc2 - 721.1707637860097*pc3 -
+    2052.436260575633*pc4 + 907.1341161024984*pc5 -
+    4006.162655049392*pc6 - 4468.292322460345*pc7 +
+    5215.441569625406*pc8 + 635.1263847844866*pc9 +
+    50.47359650174619*pc10
+twoN constrained twoNnw = 63117.2392156863 + 3664.122788676545*pc1 +
+    1292.320554805233*pc2 + 1596.845096112847*pc3 -
+    98.6869803381814*pc4 - 1443.01297770423*pc5 -
+    222.1813644106446*pc6 + 934.9400773062295*pc7 -
+    2377.457908339244*pc8 + 6706.677395527078*pc9 -
+    716.677377225125*pc10
+twoN constrained twoNecnw = 31604.1862745098 - 202.8773846025526*pc1 +
+    82.79567015106049*pc2 + 6.670947246083085*pc3 -
+    157.7727383268423*pc4 - 176.1636649734212*pc5 -
+    394.1992580681302*pc6 + 255.8079707724354*pc7 +
+    27.82922965326288*pc8 + 14.65790946380331*pc9 +
+    4.118782661311174*pc10
+twoN constrained twoNbecnw = 50845.60784313727 +
+    66.65789541926576*pc1 - 249.3940729503757*pc2 -
+    417.6053703629727*pc3 - 350.1195931119311*pc4 -
+    411.3686542832561*pc5 + 136.6239362285892*pc6 -
+    124.8042142071488*pc7 - 168.1036507923247*pc8 -
+    20.09928331627371*pc9 + 1.503161694781215*pc10
+mixFrac constrained m3 = 0.2381472745098039 - 0.0006632285425286833*pc1 -
+    0.009839366988226057*pc2 + 0.0001275282333340177*pc3 +
+    0.004180527647584797*pc4 + 0.002973981541957235*pc5 -
+    0.006713098428505485*pc6 - 0.002502751528133619*pc7 -
+    0.005689030666563787*pc8 + 0.001034401164945192*pc9 -
+    4.430623633424137e-05*pc10
+time    fixed   zero = 0
+twoN    fixed   one = 1
+time    fixed   Tbecnw = 75200
+time	constrained	Tc = 0.5*Tnw
+segment b	t=zero  twoN=one        samples=1	# paniscus
+segment e	t=zero  twoN=one        samples=1	# schweinfurthii
+segment	e2	t=Tc	twoN=twoNe
+segment c	t=zero  twoN=one        samples=1	# troglodytes
+segment n	t=zero  twoN=one        samples=1	# ellioti
+segment	n2	t=Tc	twoN=twoNn
+segment w	t=zero  twoN=one        samples=1	# verus
+segment ec	t=Tec   twoN=twoNec
+segment nw	t=Tnw   twoN=twoNnw
+segment ecnw    t=Tecnw twoN=twoNecnw
+segment becnw   t=Tbecnw	twoN=twoNbecnw
+mix n from n2 + m3*e2
+derive b from becnw
+derive e from e2
+derive e2 from ec
+derive c from ec
+derive n2 from nw
+derive w from nw
+derive ec from ecnw
+derive nw from ecnw
+derive ecnw from becnw

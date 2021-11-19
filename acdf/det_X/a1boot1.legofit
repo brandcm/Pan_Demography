@@ -1,0 +1,112 @@
+########################################
+# legofit: estimate population history #
+#       version 2.3.4-4-g53f8760       #
+########################################
+
+# Program was compiled: Sep 21 2021 14:36:42
+# Program was run: Fri Sep 24 05:56:24 2021
+
+# cmd: legofit -1 -d 0 -t 32 --ptsPerDim 3 --stateOut a1boot1.state --tol 3e-6 -S 5000 acdf.lgo ../../chrX/boot_chrX/boot1.opf
+# Stage nOptItr nSimReps
+#     0    5000        0
+# algorithm          : deterministic
+# ignoring probs <=  : 0
+# Branch length floor: 0
+# DE strategy        : 2
+#    F               : 0.3
+#    CR              : 0.8
+#    tolerance       : 3e-06
+# nthreads           : 32
+# lgo input file     : acdf.lgo
+# site pat input file: ../../chrX/boot_chrX/boot1.opf
+# free parameters    : 18
+# points in DE swarm : 54
+# output state file  : a1boot1.state
+# Including singleton site patterns.
+# cost function      : KL
+Initial parameter values
+Fixed:
+      zero = 0
+       one = 1
+    Tbecnw = 75200
+Free:
+   Tgbecnw = 140000
+     Tecnw = 23540
+       Tnw = 6420
+       Tec = 10000
+     twoNb = 10000
+     twoNe = 10000
+     twoNc = 10000
+     twoNn = 10000
+     twoNw = 10000
+    twoNec = 10000
+    twoNnw = 10000
+  twoNecnw = 15000
+  twoNbecnw = 20000
+  twoNgbecnw = 40000
+         m = 0.026
+        m3 = 0.01
+        m4 = 0.01
+        m6 = 0.01
+Constrained:
+        Ta = 42600
+        Tc = 3210
+        Td = 1605
+        Tf = 802.5
+DiffEv reached_goal. cost=2.49196e-03 spread=2.98060e-06
+Fitted parameter values
+Free:
+   Tgbecnw = 367441
+     Tecnw = 29371.4
+       Tnw = 26870
+       Tec = 14431.8
+     twoNb = 142780
+     twoNe = 25295.8
+     twoNc = 126078
+     twoNn = 110479
+     twoNw = 222864
+    twoNec = 85576.6
+    twoNnw = 7032.01
+  twoNecnw = 72803.4
+  twoNbecnw = 33899.4
+  twoNgbecnw = 33552.8
+         m = 0.123044
+        m3 = 0.207686
+        m4 = 0.0131001
+        m6 = 1.43395e-05
+Constrained:
+        Ta = 44815.9
+        Tc = 13435
+        Td = 6717.49
+        Tf = 3358.74
+#       SitePat  BranchLen
+              b 135804.6130745
+              e 51837.9261530
+              c 52641.5181418
+              n 48588.0268877
+              w 51496.0182015
+            b:e 1512.6844949
+            b:c 2021.7561601
+            b:n 1219.4039687
+            b:w 1411.3437782
+            e:c 13234.0878468
+            e:n 5540.6223166
+            e:w 4421.1980880
+            c:n 5072.2947739
+            c:w 4406.1279079
+            n:w 14494.6855189
+          b:e:c 1648.1198555
+          b:e:n 700.9030929
+          b:e:w 682.3244872
+          b:c:n 689.0426347
+          b:c:w 708.3648803
+          b:n:w 1636.9932416
+          e:c:n 5550.9564393
+          e:c:w 4428.5562201
+          e:n:w 6266.9236859
+          c:n:w 5766.7611275
+        b:e:c:n 1418.8049661
+        b:e:c:w 1226.1215167
+        b:e:n:w 1867.0939686
+        b:c:n:w 1523.8105094
+        e:c:n:w 53735.0576494

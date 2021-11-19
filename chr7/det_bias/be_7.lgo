@@ -1,0 +1,46 @@
+# .lgo file
+# be2 for chr 7
+time    fixed   zero = 0
+twoN    fixed   one = 1
+param   free    [0,10]  s=1  # multiplier for n breeding females and males
+param	free	[0,10]	s2=1	# multiplier for sex biased emigration
+time    fixed   Tbecnw = 75200
+time    constrained    Tecnw = 39497.5*s
+time    constrained    Tnw = 4563.02*s
+time    constrained    Tec = 1338.41*s
+time	constrained	Tb = 20417.9*s
+time	constrained	Te = 669.205*s
+twoN	constrained	twoNb = 2214660*s
+twoN	constrained	twoNe = 292816*s
+twoN	constrained	twoNw = 927800*s
+twoN    constrained	twoNec = 291883*s
+twoN    constrained	twoNnw = 161827*s
+twoN    constrained	twoNecnw = 31659.2*s
+twoN    constrained	twoNbecnw = 75353.2*s
+mixFrac	constrained	m2 = 0.00603518*s2
+mixFrac constrained	m5 = 0.21402*s2
+segment b	t=zero  twoN=one        samples=1	# paniscus
+segment b2	t=Tb    twoN=twoNb
+segment e	t=zero  twoN=one        samples=1	# schweinfurthii
+segment e2	t=Te    twoN=twoNe
+segment c	t=zero  twoN=one        samples=1	# troglodytes
+segment n	t=zero  twoN=one        samples=1	# ellioti
+segment w	t=zero  twoN=one        samples=1	# verus
+segment w2	t=Te    twoN=twoNw
+segment ec	t=Tec   twoN=twoNec
+segment ec2     t=Tb    twoN=twoNec
+segment nw	t=Tnw   twoN=twoNnw
+segment ecnw    t=Tecnw twoN=twoNecnw
+segment becnw   t=Tbecnw        twoN=twoNbecnw
+mix ec from ec2 + m2*b2
+mix e from e2 + m5*w2
+derive b from b2
+derive b2 from becnw
+derive e2 from ec
+derive c from ec
+derive n from nw
+derive w from w2
+derive w2 from nw
+derive ec2 from ecnw
+derive nw from ecnw
+derive ecnw from becnw

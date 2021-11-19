@@ -1,0 +1,102 @@
+########################################
+# legofit: estimate population history #
+#       version 2.3.4-4-g53f8760       #
+########################################
+
+# Program was compiled: Sep 21 2021 14:36:42
+# Program was run: Sat Oct  9 13:01:45 2021
+
+# cmd: legofit -1 -d 0 -t 32 --ptsPerDim 3 --stateOut a1boot22.state --tol 3e-6 -S 5000 bef.lgo ../../boot/boot22.opf
+# Stage nOptItr nSimReps
+#     0    5000        0
+# algorithm          : deterministic
+# ignoring probs <=  : 0
+# Branch length floor: 0
+# DE strategy        : 2
+#    F               : 0.3
+#    CR              : 0.8
+#    tolerance       : 3e-06
+# nthreads           : 32
+# lgo input file     : bef.lgo
+# site pat input file: ../../boot/boot22.opf
+# free parameters    : 14
+# points in DE swarm : 42
+# output state file  : a1boot22.state
+# Including singleton site patterns.
+# cost function      : KL
+Initial parameter values
+Fixed:
+      zero = 0
+       one = 1
+    Tbecnw = 75200
+Free:
+     Tecnw = 23540
+       Tnw = 10000
+       Tec = 6420
+     twoNb = 10000
+     twoNe = 10000
+     twoNc = 10000
+     twoNw = 10000
+    twoNec = 10000
+    twoNnw = 10000
+  twoNecnw = 15000
+  twoNbecnw = 20000
+        m2 = 0.01
+        m5 = 0.01
+        m6 = 0.01
+Constrained:
+        Tb = 14980
+        Te = 3210
+        Tf = 1605
+DiffEv reached_goal. cost=3.52008e-03 spread=2.95333e-06
+Fitted parameter values
+Free:
+     Tecnw = 38616.6
+       Tnw = 19321.9
+       Tec = 24403.7
+     twoNb = 205960
+     twoNe = 29543.4
+     twoNc = 30154.9
+     twoNw = 140170
+    twoNec = 63732.9
+    twoNnw = 65373.2
+  twoNecnw = 34297.9
+  twoNbecnw = 73545.7
+        m2 = 0.000178863
+        m5 = 0.274249
+        m6 = 0.112324
+Constrained:
+        Tb = 31510.1
+        Te = 12201.8
+        Tf = 6100.92
+#       SitePat  BranchLen
+              b 135119.3335997
+              e 51895.9480674
+              c 54674.5767237
+              n 49508.5431532
+              w 48563.7599611
+            b:e 2318.0245579
+            b:c 2678.9448370
+            b:n 2034.8537111
+            b:w 1960.4486147
+            e:c 10863.9002511
+            e:n 5330.2095046
+            e:w 5741.8878318
+            c:n 4741.2839090
+            c:w 5012.2894925
+            n:w 13188.5625303
+          b:e:c 2348.5361324
+          b:e:n 1137.2455314
+          b:e:w 1148.1490835
+          b:c:n 1148.1685507
+          b:c:w 1137.2608341
+          b:n:w 2348.0855973
+          e:c:n 5756.4634629
+          e:c:w 6018.5627443
+          e:n:w 8544.9323143
+          c:n:w 7084.2952544
+        b:e:c:n 1960.6197568
+        b:e:c:w 2035.0290178
+        b:e:n:w 2676.6676908
+        b:c:n:w 2316.2449802
+        e:c:n:w 54591.4365483

@@ -1,0 +1,20 @@
+#!/bin/bash
+#SBATCH -J b1boot
+#SBATCH --account=rogersa
+#SBATCH --partition=notchpeak
+#SBATCH --time=2:00:00
+#SBATCH --nodes 1
+#SBATCH --ntasks 1
+#SBATCH -o b1boot%a.legofit # stdout
+#SBATCH -e b1boot%a.err # stderr
+#SBATCH --mail-type=END,FAIL
+#SBATCH --mail-user=cbrand2@uoregon.edu
+
+improbable=0
+i=${SLURM_ARRAY_TASK_ID}
+ifile=$(printf "../../chrX/boot_chrX/boot%d.opf" $i)
+stateout=$(printf "b1boot%d.state" $i)
+lgofile=abdeh2.lgo
+threads=56
+
+legofit -1 -d $improbable -t $threads --ptsPerDim 3 --stateOut $stateout --tol 3e-6 -S 5000 $lgofile $ifile

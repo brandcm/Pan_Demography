@@ -1,0 +1,102 @@
+########################################
+# legofit: estimate population history #
+#       version 2.3.4-4-g53f8760       #
+########################################
+
+# Program was compiled: Sep 21 2021 14:36:42
+# Program was run: Wed Sep 22 15:17:00 2021
+
+# cmd: legofit -1 -d 0 -t 32 --ptsPerDim 3 --stateOut a1boot30.state --tol 3e-6 -S 5000 bcd.lgo ../../boot/boot30.opf
+# Stage nOptItr nSimReps
+#     0    5000        0
+# algorithm          : deterministic
+# ignoring probs <=  : 0
+# Branch length floor: 0
+# DE strategy        : 2
+#    F               : 0.3
+#    CR              : 0.8
+#    tolerance       : 3e-06
+# nthreads           : 32
+# lgo input file     : bcd.lgo
+# site pat input file: ../../boot/boot30.opf
+# free parameters    : 14
+# points in DE swarm : 42
+# output state file  : a1boot30.state
+# Including singleton site patterns.
+# cost function      : KL
+Initial parameter values
+Fixed:
+      zero = 0
+       one = 1
+    Tbecnw = 75200
+Free:
+     Tecnw = 23540
+       Tnw = 6420
+       Tec = 10000
+     twoNb = 10000
+     twoNe = 10000
+     twoNc = 10000
+     twoNn = 10000
+    twoNec = 10000
+    twoNnw = 10000
+  twoNecnw = 15000
+  twoNbecnw = 20000
+        m2 = 0.01
+        m3 = 0.01
+        m4 = 0.01
+Constrained:
+        Tb = 16770
+        Tc = 3210
+        Td = 1605
+DiffEv reached_goal. cost=3.39049e-03 spread=2.32685e-06
+Fitted parameter values
+Free:
+     Tecnw = 36724.4
+       Tnw = 17598.6
+       Tec = 22831
+     twoNb = 117596
+     twoNe = 115083
+     twoNc = 16344.7
+     twoNn = 31413.2
+    twoNec = 133320
+    twoNnw = 62554.3
+  twoNecnw = 34727.3
+  twoNbecnw = 74482.5
+        m2 = 1.10595e-06
+        m3 = 0.198714
+        m4 = 0.00224369
+Constrained:
+        Tb = 29777.7
+        Tc = 8799.3
+        Td = 4399.65
+#       SitePat  BranchLen
+              b 135742.8496780
+              e 53376.9399431
+              c 54413.3226279
+              n 48397.5386782
+              w 50602.5498607
+            b:e 2462.8803179
+            b:c 2671.2466675
+            b:n 1922.7549248
+            b:w 2167.8937144
+            e:c 10472.8063736
+            e:n 5977.6279987
+            e:w 4689.4137783
+            c:n 4960.1021908
+            c:w 4953.2311099
+            n:w 13365.6772914
+          b:e:c 2337.1306653
+          b:e:n 1227.7161724
+          b:e:w 1143.4463932
+          b:c:n 1146.5617596
+          b:c:w 1231.1646990
+          b:n:w 2332.2547509
+          e:c:n 6554.0644864
+          e:c:w 5644.1455517
+          e:n:w 7857.7890434
+          c:n:w 7460.0154973
+        b:e:c:n 2171.3460355
+        b:e:c:w 1925.8671392
+        b:e:n:w 2567.5559743
+        b:c:n:w 2467.7250694
+        e:c:n:w 55109.6640884

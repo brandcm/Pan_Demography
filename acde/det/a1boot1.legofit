@@ -1,0 +1,112 @@
+########################################
+# legofit: estimate population history #
+#       version 2.3.4-4-g53f8760       #
+########################################
+
+# Program was compiled: Sep 21 2021 14:36:42
+# Program was run: Fri Sep 24 06:51:14 2021
+
+# cmd: legofit -1 -d 0 -t 32 --ptsPerDim 3 --stateOut a1boot1.state --tol 3e-6 -S 5000 acde.lgo ../../boot/boot1.opf
+# Stage nOptItr nSimReps
+#     0    5000        0
+# algorithm          : deterministic
+# ignoring probs <=  : 0
+# Branch length floor: 0
+# DE strategy        : 2
+#    F               : 0.3
+#    CR              : 0.8
+#    tolerance       : 3e-06
+# nthreads           : 32
+# lgo input file     : acde.lgo
+# site pat input file: ../../boot/boot1.opf
+# free parameters    : 18
+# points in DE swarm : 54
+# output state file  : a1boot1.state
+# Including singleton site patterns.
+# cost function      : KL
+Initial parameter values
+Fixed:
+      zero = 0
+       one = 1
+    Tbecnw = 75200
+Free:
+   Tgbecnw = 140000
+     Tecnw = 23540
+       Tnw = 6420
+       Tec = 10000
+     twoNb = 10000
+     twoNe = 10000
+     twoNc = 10000
+     twoNn = 10000
+     twoNw = 10000
+    twoNec = 10000
+    twoNnw = 10000
+  twoNecnw = 15000
+  twoNbecnw = 20000
+  twoNgbecnw = 40000
+         m = 0.026
+        m3 = 0.01
+        m4 = 0.01
+        m5 = 0.01
+Constrained:
+        Ta = 42600
+        Tc = 3210
+        Td = 1605
+        Te = 802.5
+DiffEv reached_goal. cost=2.05288e-03 spread=2.82786e-06
+Fitted parameter values
+Free:
+   Tgbecnw = 237992
+     Tecnw = 38689.5
+       Tnw = 20786
+       Tec = 12168.6
+     twoNb = 185935
+     twoNe = 35566.7
+     twoNc = 47172.9
+     twoNn = 90570.4
+     twoNw = 370780
+    twoNec = 224204
+    twoNnw = 56340.2
+  twoNecnw = 80576.1
+  twoNbecnw = 52412.6
+  twoNgbecnw = 149685
+         m = 0.194276
+        m3 = 0.233643
+        m4 = 0.00746756
+        m5 = 0.0920528
+Constrained:
+        Ta = 43684.3
+        Tc = 10393
+        Td = 5196.5
+        Te = 2598.25
+#       SitePat  BranchLen
+              b 164103.3994254
+              e 64184.0065388
+              c 67179.5952391
+              n 59347.6616666
+              w 61936.1810014
+            b:e 2950.5425225
+            b:c 3561.9165704
+            b:n 2410.0183951
+            b:w 2664.7345488
+            e:c 13447.0133165
+            e:n 7573.8891597
+            e:w 6760.7928006
+            c:n 6722.4399666
+            c:w 5868.8875923
+            n:w 16721.1020027
+          b:e:c 2849.2989514
+          b:e:n 1507.8100454
+          b:e:w 1520.5566649
+          b:c:n 1525.1737966
+          b:c:w 1516.3247266
+          b:n:w 2832.9924595
+          e:c:n 6687.4404533
+          e:c:w 5765.5698519
+          e:n:w 8719.4946237
+          c:n:w 7366.1788719
+        b:e:c:n 2738.5139103
+        b:e:c:w 2479.9002072
+        b:e:n:w 3555.5383317
+        b:c:n:w 3032.1136948
+        e:c:n:w 68508.4671019

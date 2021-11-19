@@ -1,0 +1,91 @@
+# (grep ^# b.lgo; pclgo b.lgo a2.legofit a2boot*.legofit; grep -v ^# b.lgo | egrep -v "\<free\>")
+# .lgo file
+# b
+# PCA calculated with gsl_linalg_SV_decomp
+# Fraction of variance:
+#      pc1      pc2      pc3      pc4      pc5      pc6      pc7      pc8
+#  0.56754  0.19429  0.11856  0.08057  0.03284  0.00481  0.00103  0.00024
+#      pc9
+#  0.00011
+param free [    -4,      4] pc1 = 0
+param free [    -2,      2] pc2 = 0
+param free [    -2,      2] pc3 = 0
+param free [    -2,      2] pc4 = 0
+param free [    -2,      2] pc5 = 0
+param free [    -1,      1] pc6 = 0
+param free [  -0.5,    0.5] pc7 = 0
+param free [  -0.5,    0.5] pc8 = 0
+param free [  -0.5,    0.5] pc9 = 0
+time constrained Tecnw = 35571.01960784314 + 214.5875594650387*pc1 +
+    217.8855637199651*pc2 - 75.96731690014434*pc3 -
+    47.16443270157403*pc4 - 52.98586262356483*pc5 +
+    209.5204376922784*pc6 - 422.7729923538828*pc7 -
+    47.69105779633001*pc8 + 33.88066111707074*pc9
+time constrained Tnw = 12593.37901960784 - 1585.480174727736*pc1 +
+    476.1686196741444*pc2 + 113.2203087187215*pc3 -
+    1745.058974794429*pc4 + 1229.501149939252*pc5 +
+    1166.510426600045*pc6 - 267.0319594429172*pc7 +
+    917.2159175803927*pc8 - 2527.75822159788*pc9
+time constrained Tec = 21297.68431372549 - 1235.477063374148*pc1 +
+    781.0494322022899*pc2 - 1787.915879273753*pc3 +
+    994.1126139877115*pc4 - 294.5978558606208*pc5 -
+    20.99618246301925*pc6 + 212.0463313508416*pc7 -
+    2404.336051007496*pc8 - 892.133195360317*pc9
+twoN constrained twoNb = 375045.231372549 + 19020.3513889419*pc1 -
+    80174.98732437738*pc2 - 98918.12732510238*pc3 -
+    104456.2230740705*pc4 - 73457.96837832005*pc5 -
+    12166.23699609726*pc6 + 583.659410488454*pc7 +
+    3516.006420574449*pc8 + 518.2093647287138*pc9
+twoN constrained twoNec = 165188.9529411765 + 16296.7771882438*pc1 -
+    6611.342529974265*pc2 + 24635.03989565977*pc3 -
+    15951.65869770349*pc4 - 349.2593391192496*pc5 -
+    1350.393820257088*pc6 + 4113.786306981968*pc7 -
+    30674.27090897348*pc8 - 11709.45224457165*pc9
+twoN constrained twoNnw = 112050.5411764706 + 10631.46163549831*pc1 -
+    2141.972722652551*pc2 - 1444.927855428838*pc3 +
+    10375.30311491366*pc4 - 6442.066631695625*pc5 -
+    6615.726382890549*pc6 - 1260.763098346857*pc7 +
+    6604.065000562469*pc8 - 17956.16646013262*pc9
+twoN constrained twoNecnw = 35282.21960784314 -
+    266.5286377195366*pc1 - 153.6914692645271*pc2 +
+    126.5331255974877*pc3 - 6.693331604802826*pc4 -
+    5.099899867598704*pc5 - 376.8221207249235*pc6 -
+    417.6863665611604*pc7 - 42.99567232130931*pc8 +
+    0.6571920319602755*pc9
+twoN constrained twoNbecnw = 74422.70588235297 +
+    153.7163452536215*pc1 + 456.4176256936307*pc2 -
+    123.1220816218371*pc3 - 255.4202025146354*pc4 +
+    150.4461994324657*pc5 - 463.2360117674029*pc6 +
+    112.5393803696948*pc7 + 42.15956851428447*pc8 +
+    23.19164966330879*pc9
+mixFrac constrained m2 = 0.001187057256274509 +
+    0.0004809572316469956*pc1 - 0.0006424494628475289*pc2 -
+    0.0005373151332692553*pc3 + 0.0001690657187526884*pc4 +
+    0.001309136755912891*pc5 - 5.775026130876099e-05*pc6 -
+    0.0001829090595536462*pc7 - 0.000164710734653288*pc8 +
+    6.194839749793934e-06*pc9
+time    fixed   zero = 0
+twoN    fixed   one = 1
+time    fixed   Tbecnw = 75200
+time	constrained	Tb = 0.5*(Tecnw + Tec)
+segment b	t=zero  twoN=one        samples=1	# paniscus
+segment b2	t=Tb	twoN=twoNb
+segment e	t=zero  twoN=one        samples=1	# schweinfurthii
+segment c	t=zero  twoN=one        samples=1	# troglodytes
+segment n	t=zero  twoN=one        samples=1	# ellioti
+segment w	t=zero  twoN=one        samples=1	# verus
+segment ec	t=Tec   twoN=twoNec
+segment	ec2	t=Tb	twoN=twoNec
+segment nw	t=Tnw   twoN=twoNnw
+segment ecnw    t=Tecnw twoN=twoNecnw
+segment becnw   t=Tbecnw	twoN=twoNbecnw
+mix ec from ec2 + m2*b2
+derive b from b2
+derive b2 from becnw
+derive e from ec
+derive c from ec
+derive n from nw
+derive w from nw
+derive ec2 from ecnw
+derive nw from ecnw
+derive ecnw from becnw

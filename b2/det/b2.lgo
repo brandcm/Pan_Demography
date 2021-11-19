@@ -1,0 +1,91 @@
+# (grep ^# b.lgo; pclgo b.lgo a2.legofit a2boot*.legofit; grep -v ^# b.lgo | egrep -v "\<free\>")
+# .lgo file
+# b2
+# PCA calculated with gsl_linalg_SV_decomp
+# Fraction of variance:
+#      pc1      pc2      pc3      pc4      pc5      pc6      pc7      pc8
+#  0.51395  0.23897  0.13606  0.07737  0.02455  0.00675  0.00194  0.00029
+#      pc9
+#  0.00012
+param free [    -4,      4] pc1 = 0
+param free [    -2,      2] pc2 = 0
+param free [    -2,      2] pc3 = 0
+param free [    -2,      2] pc4 = 0
+param free [    -2,      2] pc5 = 0
+param free [    -1,      1] pc6 = 0
+param free [    -1,      1] pc7 = 0
+param free [  -0.5,    0.5] pc8 = 0
+param free [  -0.5,    0.5] pc9 = 0
+time constrained Tecnw = 35305.80588235294 - 163.5818982581721*pc1 -
+    173.2094564717287*pc2 + 103.0756162350956*pc3 -
+    39.5583045281159*pc4 - 55.48991569146447*pc5 +
+    157.9492364954738*pc6 + 324.1980360428031*pc7 -
+    47.94226936897708*pc8 - 45.37301155022023*pc9
+time constrained Tnw = 14442.68411764706 + 1535.175198221609*pc1 -
+    111.4628893229703*pc2 + 865.0702398388505*pc3 -
+    795.5673334003311*pc4 + 1435.823104062191*pc5 +
+    1210.474838460475*pc6 + 331.4626063940101*pc7 +
+    39.33193722133204*pc8 + 2334.256199978351*pc9
+time constrained Tec = 21016.86215686275 + 1021.084334765106*pc1 -
+    1597.680292729825*pc2 - 1625.734587516735*pc3 -
+    461.2938134996775*pc4 - 731.3075273375571*pc5 -
+    8.696109376165976*pc6 - 346.4003810132468*pc7 -
+    2582.527042924477*pc8 + 244.4925038417374*pc9
+twoN constrained twoNb = 413494.1960784314 - 35308.6121500574*pc1 +
+    56862.02118962882*pc2 - 27986.57915030028*pc3 -
+    160462.0495549228*pc4 - 24670.67854619586*pc5 -
+    10059.28604383422*pc6 + 3336.691599335279*pc7 +
+    3853.570255239234*pc8 + 1472.241441738549*pc9
+twoN constrained twoNec = 167628.1647058824 - 12941.69249887693*pc1 +
+    19007.07637417975*pc2 + 25523.18887945995*pc3 +
+    3994.750697895885*pc4 + 2562.227130127943*pc5 -
+    2725.842578879091*pc6 - 6772.000481264942*pc7 -
+    33210.64742878316*pc8 + 2680.363023701239*pc9
+twoN constrained twoNnw = 99864.01372549018 - 10286.45943980918*pc1 +
+    71.43646377412372*pc2 - 5358.501340170456*pc3 +
+    4848.514325024968*pc4 - 6279.19729975528*pc5 -
+    6702.165505506215*pc6 + 2006.916277171356*pc7 +
+    1577.849950977661*pc8 + 17433.22830067926*pc9
+twoN constrained twoNecnw = 35603.20588235294 +
+    229.1451286592197*pc1 + 159.9202520229814*pc2 -
+    20.57913419075242*pc3 + 31.43826057695837*pc4 +
+    24.07681333011021*pc5 - 311.658255423991*pc6 +
+    355.1401979400023*pc7 - 56.99262793866516*pc8 -
+    27.38719465258925*pc9
+twoN constrained twoNbecnw = 74179.21960784313 -
+    88.48975685899072*pc1 - 358.0960690086123*pc2 +
+    208.3861858350413*pc3 - 153.1756513286487*pc4 +
+    207.767054655335*pc5 - 378.2024529379294*pc6 -
+    96.52429725702424*pc7 + 37.45695423593123*pc8 -
+    6.935236305386374*pc9
+mixFrac constrained m2 = 0.0009278812490196078 -
+    0.0005923248936256677*pc1 + 0.0001781394725075275*pc2 -
+    0.0008345582052353682*pc3 + 0.0001282279166610896*pc4 +
+    0.001307770281954855*pc5 + 0.0001043914219098241*pc6 +
+    0.0001948038062622186*pc7 - 0.0002511444172369108*pc8 -
+    0.0001309360649186121*pc9
+time    fixed   zero = 0
+twoN    fixed   one = 1
+time    fixed   Tbecnw = 75200
+time	constrained	Tb = 0.5*(Tecnw + Tec)
+segment b	t=zero  twoN=one        samples=1	# paniscus
+segment b2	t=Tb	twoN=twoNb
+segment e	t=zero  twoN=one        samples=1	# schweinfurthii
+segment c	t=zero  twoN=one        samples=1	# troglodytes
+segment n	t=zero  twoN=one        samples=1	# ellioti
+segment w	t=zero  twoN=one        samples=1	# verus
+segment ec	t=Tec   twoN=twoNec
+segment	ec2	t=Tb	twoN=twoNec
+segment nw	t=Tnw   twoN=twoNnw
+segment ecnw    t=Tecnw twoN=twoNecnw
+segment becnw   t=Tbecnw	twoN=twoNbecnw
+mix ec from ec2 + m2*b2
+derive b from b2
+derive b2 from becnw
+derive e from ec
+derive c from ec
+derive n from nw
+derive w from nw
+derive ec2 from ecnw
+derive nw from ecnw
+derive ecnw from becnw

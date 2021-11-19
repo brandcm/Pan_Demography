@@ -1,0 +1,88 @@
+########################################
+# legofit: estimate population history #
+#       version 2.3.4-4-g53f8760       #
+########################################
+
+# Program was compiled: Sep 21 2021 14:36:42
+# Program was run: Sat Oct  9 14:56:43 2021
+
+# cmd: legofit -1 -d 0 -t 32 --ptsPerDim 3 --stateOut a1boot11.state --tol 3e-6 -S 5000 b.lgo ../../boot/boot11.opf
+# Stage nOptItr nSimReps
+#     0    5000        0
+# algorithm          : deterministic
+# ignoring probs <=  : 0
+# Branch length floor: 0
+# DE strategy        : 2
+#    F               : 0.3
+#    CR              : 0.8
+#    tolerance       : 3e-06
+# nthreads           : 27
+# lgo input file     : b.lgo
+# site pat input file: ../../boot/boot11.opf
+# free parameters    : 9
+# points in DE swarm : 27
+# output state file  : a1boot11.state
+# Including singleton site patterns.
+# cost function      : KL
+Initial parameter values
+Fixed:
+      zero = 0
+       one = 1
+    Tbecnw = 75200
+Free:
+     Tecnw = 23540
+       Tnw = 10000
+       Tec = 6420
+     twoNb = 10000
+    twoNec = 10000
+    twoNnw = 10000
+  twoNecnw = 15000
+  twoNbecnw = 20000
+        m2 = 0.01
+Constrained:
+        Tb = 14980
+DiffEv reached_goal. cost=5.08413e-03 spread=2.41651e-06
+Fitted parameter values
+Free:
+     Tecnw = 27115.9
+       Tnw = 23224.8
+       Tec = 21589.4
+     twoNb = 120128
+    twoNec = 45369.9
+    twoNnw = 18961.5
+  twoNecnw = 42728.9
+  twoNbecnw = 62870.8
+        m2 = 0.00983957
+Constrained:
+        Tb = 24352.7
+#       SitePat  BranchLen
+              b 125779.0488276
+              e 47361.8561827
+              c 47361.8561827
+              n 44922.2102194
+              w 44922.2102194
+            b:e 2355.8388322
+            b:c 2355.8388322
+            b:n 1773.6316654
+            b:w 1773.6316654
+            e:c 11146.3504208
+            e:n 5101.4991456
+            e:w 5101.4991456
+            c:n 5101.4991456
+            c:w 5101.4991456
+            n:w 12505.1986611
+          b:e:c 2040.4236945
+          b:e:n 986.7729044
+          b:e:w 986.7729044
+          b:c:n 986.7729044
+          b:c:w 986.7729044
+          b:n:w 1996.2278287
+          e:c:n 6203.5220469
+          e:c:w 6203.5220469
+          e:n:w 7590.2106096
+          c:n:w 7590.2106096
+        b:e:c:n 1792.4423787
+        b:e:c:w 1792.4423787
+        b:e:n:w 2112.9545716
+        b:c:n:w 2112.9545716
+        e:c:n:w 49056.4196016

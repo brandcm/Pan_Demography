@@ -1,0 +1,48 @@
+# .lgo file
+# ac model
+time	fixed	zero = 0
+twoN	fixed	one = 1
+time	free	Tgbecnw = 140000
+time	fixed	Tbecnw = 75200
+time	free	Tecnw = 23540
+time	free	Tnw = 6420
+time	free	Tec = 10000
+time	constrained	Ta = 0.5*Tbecnw
+time	constrained	Tc = 0.5*Tnw
+twoN	free	twoNb = 10000
+twoN	free	twoNe = 10000
+twoN	free	twoNn = 10000
+twoN	free	twoNec = 10000
+twoN	free	twoNnw = 10000
+twoN	free	twoNecnw = 15000
+twoN	free	twoNbecnw = 20000
+twoN	free	twoNgbecnw = 40000
+mixFrac free	m = 0.026
+mixFrac	free	m3 = 0.01
+segment g	t=Ta	twoN=one	# ghost
+segment b	t=zero	twoN=one	samples=1	# paniscus
+segment	b2	t=Ta	twoN=twoNb
+segment e	t=zero	twoN=one	samples=1	# schweinfurthii
+segment	e2	t=Tc	twoN=twoNe
+segment c	t=zero	twoN=one	samples=1	# troglodytes
+segment n	t=zero	twoN=one	samples=1	# ellioti
+segment	n2	t=Tc	twoN=twoNn
+segment w	t=zero	twoN=one	samples=1	# verus
+segment ec	t=Tec	twoN=twoNec
+segment nw	t=Tnw	twoN=twoNnw
+segment ecnw	t=Tecnw	twoN=twoNecnw
+segment becnw	t=Tbecnw	twoN=twoNbecnw
+segment gbecnw	t=Tgbecnw	twoN=twoNgbecnw
+mix b from b2 + m*g
+mix n from n2 + m3*e2
+derive g from gbecnw
+derive b2 from becnw
+derive e from e2
+derive e2 from ec
+derive c from ec
+derive n2 from nw
+derive w from nw
+derive ec from ecnw
+derive nw from ecnw
+derive ecnw from becnw
+derive becnw from gbecnw

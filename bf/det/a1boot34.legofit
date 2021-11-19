@@ -1,0 +1,96 @@
+########################################
+# legofit: estimate population history #
+#       version 2.3.4-4-g53f8760       #
+########################################
+
+# Program was compiled: Sep 21 2021 14:36:42
+# Program was run: Wed Sep 22 23:33:10 2021
+
+# cmd: legofit -1 -d 0 -t 32 --ptsPerDim 3 --stateOut a1boot34.state --tol 3e-6 -S 5000 bf.lgo ../../boot/boot34.opf
+# Stage nOptItr nSimReps
+#     0    5000        0
+# algorithm          : deterministic
+# ignoring probs <=  : 0
+# Branch length floor: 0
+# DE strategy        : 2
+#    F               : 0.3
+#    CR              : 0.8
+#    tolerance       : 3e-06
+# nthreads           : 32
+# lgo input file     : bf.lgo
+# site pat input file: ../../boot/boot34.opf
+# free parameters    : 12
+# points in DE swarm : 36
+# output state file  : a1boot34.state
+# Including singleton site patterns.
+# cost function      : KL
+Initial parameter values
+Fixed:
+      zero = 0
+       one = 1
+    Tbecnw = 75200
+Free:
+     Tecnw = 23540
+       Tnw = 6420
+       Tec = 10000
+     twoNb = 10000
+     twoNc = 10000
+     twoNw = 10000
+    twoNec = 10000
+    twoNnw = 10000
+  twoNecnw = 15000
+  twoNbecnw = 20000
+        m2 = 0.01
+        m6 = 0.01
+Constrained:
+        Tb = 16770
+        Tf = 3210
+DiffEv reached_goal. cost=3.96171e-03 spread=2.52965e-06
+Fitted parameter values
+Free:
+     Tecnw = 32270.2
+       Tnw = 20529.1
+       Tec = 27497.7
+     twoNb = 62649.6
+     twoNc = 22756.1
+     twoNw = 48953.8
+    twoNec = 57249.6
+    twoNnw = 52627
+  twoNecnw = 38428.1
+  twoNbecnw = 70387.1
+        m2 = 1.57852e-05
+        m6 = 0.000169941
+Constrained:
+        Tb = 29883.9
+        Tf = 10264.6
+#       SitePat  BranchLen
+              b 132436.1657417
+              e 51976.0578089
+              c 51972.8452143
+              n 47687.3838338
+              w 47686.1754118
+            b:e 2402.3452215
+            b:c 2401.9854779
+            b:n 1940.8271061
+            b:w 1940.7283885
+            e:c 10291.9744777
+            e:n 5122.7290056
+            e:w 5122.3686364
+            c:n 5122.7655249
+            c:w 5123.9739469
+            n:w 12898.0853747
+          b:e:c 2204.6364425
+          b:e:n 1130.2545374
+          b:e:w 1130.1558182
+          b:c:n 1130.1558148
+          b:c:w 1130.2545324
+          b:n:w 2204.5349031
+          e:c:n 6087.9107942
+          e:c:w 6088.2711634
+          e:n:w 7769.6446626
+          c:n:w 7771.2155598
+        b:e:c:n 1940.7783010
+        b:e:c:w 1940.8770202
+        b:e:n:w 2401.3588518
+        b:c:n:w 2401.7184718
+        e:c:n:w 53127.4138874

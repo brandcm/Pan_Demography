@@ -1,0 +1,100 @@
+########################################
+# legofit: estimate population history #
+#       version 2.3.4-4-g53f8760       #
+########################################
+
+# Program was compiled: Sep 21 2021 14:36:42
+# Program was run: Thu Sep 23 10:28:07 2021
+
+# cmd: legofit -1 -d 0 -t 32 --ptsPerDim 3 --stateOut a1boot21.state --tol 3e-6 -S 5000 ae.lgo ../../chrX/boot_chrX/boot21.opf
+# Stage nOptItr nSimReps
+#     0    5000        0
+# algorithm          : deterministic
+# ignoring probs <=  : 0
+# Branch length floor: 0
+# DE strategy        : 2
+#    F               : 0.3
+#    CR              : 0.8
+#    tolerance       : 3e-06
+# nthreads           : 32
+# lgo input file     : ae.lgo
+# site pat input file: ../../chrX/boot_chrX/boot21.opf
+# free parameters    : 14
+# points in DE swarm : 42
+# output state file  : a1boot21.state
+# Including singleton site patterns.
+# cost function      : KL
+Initial parameter values
+Fixed:
+      zero = 0
+       one = 1
+    Tbecnw = 75200
+Free:
+   Tgbecnw = 140000
+     Tecnw = 23540
+       Tnw = 6420
+       Tec = 10000
+     twoNb = 10000
+     twoNe = 10000
+     twoNw = 10000
+    twoNec = 10000
+    twoNnw = 10000
+  twoNecnw = 15000
+  twoNbecnw = 20000
+  twoNgbecnw = 40000
+         m = 0.026
+        m5 = 0.01
+Constrained:
+        Ta = 37600
+        Te = 3210
+DiffEv reached_goal. cost=2.80728e-03 spread=2.79942e-06
+Fitted parameter values
+Free:
+   Tgbecnw = 143204
+     Tecnw = 27905.2
+       Tnw = 22403.7
+       Tec = 13190.3
+     twoNb = 108879
+     twoNe = 18705.1
+     twoNw = 158406
+    twoNec = 87556.7
+    twoNnw = 21030.1
+  twoNecnw = 67709
+  twoNbecnw = 24050
+  twoNgbecnw = 147054
+         m = 0.175877
+        m5 = 0.100345
+Constrained:
+        Ta = 37600
+        Te = 11201.8
+#       SitePat  BranchLen
+              b 130509.7754384
+              e 49227.3286825
+              c 50921.8329187
+              n 47708.0456868
+              w 47463.4949282
+            b:e 1394.5558881
+            b:c 1522.7004475
+            b:n 1239.3618669
+            b:w 1226.2945575
+            e:c 12434.6630822
+            e:n 4724.8012289
+            e:w 4969.3519875
+            c:n 4433.5655995
+            c:w 4370.9845257
+            n:w 13746.4877608
+          b:e:c 1542.2094963
+          b:e:n 668.0216237
+          b:e:w 681.0889331
+          b:c:n 682.5507684
+          b:c:w 669.0967055
+          b:n:w 1536.1543790
+          e:c:n 4701.1463483
+          e:c:w 4763.7274221
+          e:n:w 6311.8732722
+          c:n:w 5506.9721272
+        b:e:c:n 1281.2856070
+        b:e:c:w 1294.7396700
+        b:e:n:w 1585.2084496
+        b:c:n:w 1454.5269732
+        e:c:n:w 51707.5691125

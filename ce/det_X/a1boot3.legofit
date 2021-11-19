@@ -1,0 +1,96 @@
+########################################
+# legofit: estimate population history #
+#       version 2.3.4-4-g53f8760       #
+########################################
+
+# Program was compiled: Sep 21 2021 14:36:42
+# Program was run: Wed Sep 22 13:48:35 2021
+
+# cmd: legofit -1 -d 0 -t 32 --ptsPerDim 3 --stateOut a1boot3.state --tol 3e-6 -S 5000 ce.lgo ../../chrX/boot_chrX/boot3.opf
+# Stage nOptItr nSimReps
+#     0    5000        0
+# algorithm          : deterministic
+# ignoring probs <=  : 0
+# Branch length floor: 0
+# DE strategy        : 2
+#    F               : 0.3
+#    CR              : 0.8
+#    tolerance       : 3e-06
+# nthreads           : 32
+# lgo input file     : ce.lgo
+# site pat input file: ../../chrX/boot_chrX/boot3.opf
+# free parameters    : 12
+# points in DE swarm : 36
+# output state file  : a1boot3.state
+# Including singleton site patterns.
+# cost function      : KL
+Initial parameter values
+Fixed:
+      zero = 0
+       one = 1
+    Tbecnw = 75200
+Free:
+     Tecnw = 23540
+       Tnw = 6420
+       Tec = 10000
+     twoNe = 10000
+     twoNn = 10000
+     twoNw = 10000
+    twoNec = 10000
+    twoNnw = 10000
+  twoNecnw = 15000
+  twoNbecnw = 20000
+        m3 = 0.01
+        m5 = 0.01
+Constrained:
+        Tc = 3210
+        Te = 1605
+DiffEv reached_goal. cost=3.13804e-03 spread=2.84818e-06
+Fitted parameter values
+Free:
+     Tecnw = 32473.4
+       Tnw = 23026.1
+       Tec = 22082.2
+     twoNe = 103686
+     twoNn = 22343.1
+     twoNw = 96037
+    twoNec = 43407.6
+    twoNnw = 21247.3
+  twoNecnw = 34033.8
+  twoNbecnw = 48959.2
+        m3 = 0.238598
+        m5 = 0.0900211
+Constrained:
+        Tc = 11513.1
+        Te = 5756.53
+#       SitePat  BranchLen
+              b 116728.0423784
+              e 43795.4667533
+              c 46165.7182480
+              n 41593.1888248
+              w 44050.2271149
+            b:e 1209.0812693
+            b:c 1391.3824890
+            b:n 1003.1634999
+            b:w 1227.2491894
+            e:c 10466.4759645
+            e:n 4459.8457350
+            e:w 3985.8132194
+            c:n 3904.6034246
+            c:w 3254.0000932
+            n:w 11767.9914977
+          b:e:c 1451.1997279
+          b:e:n 568.4596993
+          b:e:w 580.5934782
+          b:c:n 580.5934782
+          b:c:w 568.4596993
+          b:n:w 1451.1997279
+          e:c:n 5573.0944263
+          e:c:w 4240.6919832
+          e:n:w 6305.8602315
+          c:n:w 5222.6641734
+        b:e:c:n 1227.2491894
+        b:e:c:w 1003.1634999
+        b:e:n:w 1391.3824890
+        b:c:n:w 1209.0812693
+        e:c:n:w 45331.9234182

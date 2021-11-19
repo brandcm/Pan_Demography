@@ -1,0 +1,30 @@
+# .lgo file
+# null
+time	fixed	zero = 0
+twoN	fixed	one = 1
+time	fixed	Tbecnw = 75200  # bonobo-chimpanzee split
+time	free	Tecnw = 23540   # eastern-central, nigerian-western split
+time	free	Tnw = 6420     # nigerian-western split
+time	free	Tec = 10000	# eastern-central split
+twoN	free	twoNec = 10000
+twoN	free	twoNnw = 10000
+twoN	free	twoNecnw = 15000
+twoN	free	twoNbecnw = 20000
+segment b	t=zero	twoN=one	samples=1	# paniscus
+segment e	t=zero	twoN=one	samples=1	# schweinfurthii
+segment c	t=zero	twoN=one	samples=1	# troglodytes
+segment n	t=zero	twoN=one	samples=1	# ellioti
+segment w	t=zero	twoN=one	samples=1	# verus
+segment ec	t=Tec	twoN=twoNec
+segment nw	t=Tnw	twoN=twoNnw
+segment ecnw	t=Tecnw	twoN=twoNecnw
+segment becnw	t=Tbecnw	twoN=twoNbecnw
+derive b from becnw
+derive e from ec
+derive c from ec
+derive n from nw
+derive w from nw
+derive ec from ecnw
+derive nw from ecnw
+derive ecnw from becnw
+

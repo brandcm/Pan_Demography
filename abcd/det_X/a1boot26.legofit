@@ -1,0 +1,110 @@
+########################################
+# legofit: estimate population history #
+#            version 2.3.3             #
+########################################
+
+# Program was compiled: Sep 12 2021 17:54:39
+# Program was run: Tue Sep 14 00:57:12 2021
+
+# cmd: legofit -1 -d 0 -t 32 --ptsPerDim 3 --stateOut a1boot26.state --tol 3e-6 -S 5000 abcd.lgo ../../chrX/boot_chrX/boot26.opf
+# Stage nOptItr nSimReps
+#     0    5000        0
+# algorithm          : deterministic
+# ignoring probs <=  : 0
+# Branch length floor: 0
+# DE strategy        : 2
+#    F               : 0.3
+#    CR              : 0.8
+#    tolerance       : 3e-06
+# nthreads           : 32
+# lgo input file     : abcd.lgo
+# site pat input file: ../../chrX/boot_chrX/boot26.opf
+# free parameters    : 17
+# points in DE swarm : 51
+# output state file  : a1boot26.state
+# Including singleton site patterns.
+# cost function      : KL
+Initial parameter values
+Fixed:
+      zero = 0
+       one = 1
+    Tbecnw = 75200
+Free:
+   Tgbecnw = 140000
+     Tecnw = 23540
+       Tnw = 6420
+       Tec = 10000
+     twoNb = 10000
+     twoNe = 10000
+     twoNc = 10000
+     twoNn = 10000
+    twoNec = 10000
+    twoNnw = 10000
+  twoNecnw = 15000
+  twoNbecnw = 20000
+  twoNgbecnw = 40000
+         m = 0.026
+        m2 = 0.01
+        m3 = 0.01
+        m4 = 0.01
+Constrained:
+        Tb = 16770
+        Ta = 45985
+        Tc = 3210
+        Td = 1605
+DiffEv reached_goal. cost=2.16649e-03 spread=2.90125e-06
+Fitted parameter values
+Free:
+   Tgbecnw = 457798
+     Tecnw = 28277.4
+       Tnw = 19413.2
+       Tec = 10661.7
+     twoNb = 195263
+     twoNe = 19052.9
+     twoNc = 149456
+     twoNn = 44013
+    twoNec = 97140.2
+    twoNnw = 30633.8
+  twoNecnw = 65581.6
+  twoNbecnw = 30097.6
+  twoNgbecnw = 80665.4
+         m = 0.0762686
+        m2 = 0.0202826
+        m3 = 0.188403
+        m4 = 0.00746959
+Constrained:
+        Tb = 19469.6
+        Ta = 47334.8
+        Tc = 9706.58
+        Td = 4853.29
+#       SitePat  BranchLen
+              b 129662.3962148
+              e 49444.7265870
+              c 50154.2979754
+              n 46593.6972233
+              w 49172.7834747
+            b:e 1657.1565163
+            b:c 1895.3381900
+            b:n 1161.3284680
+            b:w 1250.9499078
+            e:c 12580.7979396
+            e:n 5406.7032367
+            e:w 4314.1931089
+            c:n 4929.8057827
+            c:w 4350.7483947
+            n:w 13569.0670509
+          b:e:c 1425.5075199
+          b:e:n 641.3071675
+          b:e:w 620.9643402
+          b:c:n 622.8971411
+          b:c:w 646.8875118
+          b:n:w 1415.2294881
+          e:c:n 5338.0463282
+          e:c:w 4409.0591361
+          e:n:w 5862.8878849
+          c:n:w 5563.7253020
+        b:e:c:n 1268.7021909
+        b:e:c:w 1196.9016842
+        b:e:n:w 2009.3179515
+        b:c:n:w 1793.5564608
+        e:c:n:w 51092.1693011

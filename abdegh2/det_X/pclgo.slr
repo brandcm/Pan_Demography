@@ -1,0 +1,18 @@
+#!/bin/bash
+#SBATCH -J pclgo
+#SBATCH --account=rogersa
+#SBATCH --partition=notchpeak
+#SBATCH --time=00:10:00
+#SBATCH --nodes 1
+#SBATCH --ntasks 1
+#SBATCH -o pclgo.out # stdout
+#SBATCH -e pclgo.err # stderr
+#SBATCH --mail-type=END,FAIL
+#SBATCH --mail-user=cbrand2@uoregon.edu
+
+
+cmd="(grep ^# abdegh.lgo;"
+cmd+=" pclgo abdegh.lgo a2.legofit a2boot*.legofit;"
+cmd+=" grep -v ^# abdegh.lgo | egrep -v \"\<free\>\")"
+echo "# "$cmd > abdegh2.lgo
+eval $cmd >> abdegh2.lgo

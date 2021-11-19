@@ -1,0 +1,98 @@
+########################################
+# legofit: estimate population history #
+#       version 2.3.4-4-g53f8760       #
+########################################
+
+# Program was compiled: Sep 21 2021 14:36:42
+# Program was run: Thu Sep 23 12:05:55 2021
+
+# cmd: legofit -1 -d 0 -t 32 --ptsPerDim 3 --tol 3e-6 -S 5000 ad.lgo ../../chrX/boot_chrX/boot26.opf --stateIn a1.state --stateIn a1boot0.state --stateIn a1boot1.state --stateIn a1boot10.state --stateIn a1boot11.state --stateIn a1boot12.state --stateIn a1boot13.state --stateIn a1boot14.state --stateIn a1boot15.state --stateIn a1boot16.state --stateIn a1boot17.state --stateIn a1boot18.state --stateIn a1boot19.state --stateIn a1boot2.state --stateIn a1boot20.state --stateIn a1boot21.state --stateIn a1boot22.state --stateIn a1boot23.state --stateIn a1boot24.state --stateIn a1boot25.state --stateIn a1boot26.state --stateIn a1boot27.state --stateIn a1boot28.state --stateIn a1boot29.state --stateIn a1boot3.state --stateIn a1boot30.state --stateIn a1boot31.state --stateIn a1boot32.state --stateIn a1boot33.state --stateIn a1boot34.state --stateIn a1boot35.state --stateIn a1boot36.state --stateIn a1boot37.state --stateIn a1boot38.state --stateIn a1boot39.state --stateIn a1boot4.state --stateIn a1boot40.state --stateIn a1boot41.state --stateIn a1boot42.state --stateIn a1boot43.state --stateIn a1boot44.state --stateIn a1boot45.state --stateIn a1boot46.state --stateIn a1boot47.state --stateIn a1boot48.state --stateIn a1boot49.state --stateIn a1boot5.state --stateIn a1boot6.state --stateIn a1boot7.state --stateIn a1boot8.state --stateIn a1boot9.state
+# Stage nOptItr nSimReps
+#     0    5000        0
+# algorithm          : deterministic
+# ignoring probs <=  : 0
+# Branch length floor: 0
+# DE strategy        : 2
+#    F               : 0.3
+#    CR              : 0.8
+#    tolerance       : 3e-06
+# nthreads           : 32
+# lgo input file     : ad.lgo
+# site pat input file: ../../chrX/boot_chrX/boot26.opf
+# free parameters    : 13
+# points in DE swarm : 39
+# input state file(s): a1.state a1boot0.state a1boot1.state a1boot10.state a1boot11.state a1boot12.state a1boot13.state a1boot14.state a1boot15.state a1boot16.state a1boot17.state a1boot18.state a1boot19.state a1boot2.state a1boot20.state a1boot21.state a1boot22.state a1boot23.state a1boot24.state a1boot25.state a1boot26.state a1boot27.state a1boot28.state a1boot29.state a1boot3.state a1boot30.state a1boot31.state a1boot32.state a1boot33.state a1boot34.state a1boot35.state a1boot36.state a1boot37.state a1boot38.state a1boot39.state a1boot4.state a1boot40.state a1boot41.state a1boot42.state a1boot43.state a1boot44.state a1boot45.state a1boot46.state a1boot47.state a1boot48.state a1boot49.state a1boot5.state a1boot6.state a1boot7.state a1boot8.state a1boot9.state
+# Including singleton site patterns.
+# cost function      : KL
+Initial parameter values
+Fixed:
+      zero = 0
+       one = 1
+    Tbecnw = 75200
+Free:
+   Tgbecnw = 184880
+     Tecnw = 26678.4
+       Tnw = 20324.3
+       Tec = 14110.9
+     twoNb = 275888
+     twoNc = 45223.9
+    twoNec = 83055.7
+    twoNnw = 29244.6
+  twoNecnw = 70964
+  twoNbecnw = 28630.9
+  twoNgbecnw = 160884
+         m = 0.146547
+        m4 = 0.0194398
+Constrained:
+        Ta = 37600
+        Td = 7055.47
+DiffEv reached_goal. cost=2.42340e-03 spread=2.87368e-06
+Fitted parameter values
+Free:
+   Tgbecnw = 131313
+     Tecnw = 24679.5
+       Tnw = 21041
+       Tec = 29.192
+     twoNb = 699289
+     twoNc = 98012.6
+    twoNec = 187909
+    twoNnw = 16328.3
+  twoNecnw = 67541.1
+  twoNbecnw = 17778.8
+  twoNgbecnw = 243702
+         m = 0.109446
+        m4 = 0.0207441
+Constrained:
+        Ta = 37600
+        Td = 14.596
+#       SitePat  BranchLen
+              b 124192.5898228
+              e 47141.0870396
+              c 48209.6254934
+              n 45674.9624454
+              w 45674.9624454
+            b:e 1361.1721945
+            b:c 1673.1067452
+            b:n 1178.9057640
+            b:w 1178.9057640
+            e:c 12176.9008474
+            e:n 4665.0993351
+            e:w 4665.0993351
+            c:n 4509.4012647
+            c:w 4509.4012647
+            n:w 12925.2632577
+          b:e:c 1424.2908854
+          b:e:n 663.8133906
+          b:e:w 663.8133906
+          b:c:n 666.9624377
+          b:c:w 666.9624377
+          b:n:w 1412.3811253
+          e:c:n 4534.6151482
+          e:c:w 4534.6151482
+          e:n:w 5884.0552495
+          c:n:w 5408.0754026
+        b:e:c:n 1254.5437111
+        b:e:c:w 1254.5437111
+        b:e:n:w 2044.9662010
+        b:c:n:w 1445.5708547
+        e:c:n:w 48813.9130835

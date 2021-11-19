@@ -1,0 +1,116 @@
+# (grep ^# a.lgo; pclgo a.lgo a2.legofit a2boot*.legofit; grep -v ^# a.lgo | egrep -v "\<free\>")
+# .lgo file
+# a
+# PCA calculated with gsl_linalg_SV_decomp
+# Fraction of variance:
+#      pc1      pc2      pc3      pc4      pc5      pc6      pc7      pc8
+#  0.45548  0.23135  0.14254  0.08452  0.06585  0.01769  0.00204  0.00037
+#      pc9     pc10     pc11
+#  0.00012  0.00002  0.00001
+param free [    -4,      4] pc1 = 0
+param free [    -4,      4] pc2 = 0
+param free [    -2,      2] pc3 = 0
+param free [    -2,      2] pc4 = 0
+param free [    -2,      2] pc5 = 0
+param free [    -1,      1] pc6 = 0
+param free [    -1,      1] pc7 = 0
+param free [  -0.5,    0.5] pc8 = 0
+param free [  -0.5,    0.5] pc9 = 0
+param free [ -0.25,   0.25] pc10 = 0
+param free [ -0.25,   0.25] pc11 = 0
+time constrained Tgbecnw = 94126.3607843137 - 2934.870199215716*pc1 -
+    438.7456051413368*pc2 + 1139.625310278738*pc3 -
+    945.8042061993074*pc4 + 1325.182917919789*pc5 -
+    3209.069881218438*pc6 - 2049.31632485986*pc7 -
+    699.0907377877706*pc8 - 123.4927363801488*pc9 -
+    4629.535978499816*pc10 - 837.1853423307145*pc11
+time constrained Tecnw = 23480.20392156863 - 133.9089653484855*pc1 -
+    195.1463297225889*pc2 + 106.986000460621*pc3 -
+    193.018435764471*pc4 + 221.6232941580211*pc5 +
+    187.2484034579668*pc6 + 179.5959587041059*pc7 +
+    142.9049843737719*pc8 + 26.42357463264177*pc9 -
+    34.73631857659943*pc10 + 197.6889085471022*pc11
+time constrained Tnw = 21631.08235294119 - 244.9138117080858*pc1 +
+    155.655164769472*pc2 - 460.281567730497*pc3 -
+    345.974790122241*pc4 + 181.6223110986481*pc5 +
+    148.4412347216303*pc6 + 87.65191458943829*pc7 +
+    97.62151330748684*pc8 + 13.37538825835117*pc9 +
+    97.95517302228831*pc10 - 579.9360402888943*pc11
+time constrained Tec = 15816.34011764706 + 286.3445405719305*pc1 +
+    2275.443690860388*pc2 + 1250.753470903354*pc3 +
+    34.43599371322205*pc4 + 1525.415486464557*pc5 +
+    414.3192979616416*pc6 + 72.09254122176274*pc7 +
+    15.00233273411031*pc8 - 2904.015738196853*pc9 +
+    92.36889890520746*pc10 + 22.3867841511975*pc11
+twoN constrained twoNb = 43501.27098039215 - 23.18439395907373*pc1 -
+    6560.898462770059*pc2 - 11314.3919470689*pc3 +
+    21492.96747476459*pc4 + 19204.12841573092*pc5 -
+    2234.369781040161*pc6 + 983.6519760384761*pc7 +
+    344.0906764871483*pc8 + 34.30213286728971*pc9 +
+    7.483926297548707*pc10 + 57.67653397049372*pc11
+twoN constrained twoNec = 106700.3215686275 - 6252.728342253234*pc1 -
+    38215.66093659062*pc2 - 18455.96175157253*pc3 -
+    3086.535035538349*pc4 - 20626.84725155216*pc5 -
+    2832.463720184538*pc6 - 1232.651893328778*pc7 -
+    1961.479433573396*pc8 - 49764.53223168365*pc9 +
+    1840.822550852796*pc10 + 334.7576637557121*pc11
+twoN constrained twoNnw = 8941.304078431373 + 538.0837726562492*pc1 -
+    1696.117684653642*pc2 + 2781.376815798072*pc3 +
+    796.2998456699142*pc4 + 162.8153005268061*pc5 +
+    161.6933506036063*pc6 + 517.7808145596349*pc7 +
+    389.1427572481761*pc8 + 48.53360552495436*pc9 +
+    536.1236681045611*pc10 - 3037.228896705997*pc11
+twoN constrained twoNecnw = 83635.05882352944 -
+    1676.243678998838*pc1 + 915.0327344221724*pc2 +
+    134.5122847603221*pc3 + 1099.319370641949*pc4 -
+    1179.911164459901*pc5 - 1653.452913099273*pc6 +
+    2023.904672509722*pc7 + 2403.035665253069*pc8 -
+    159.2931961657429*pc9 + 309.872955147726*pc10 +
+    157.2343212776797*pc11
+twoN constrained twoNbecnw = 8962.128921568627 -
+    1448.039842821456*pc1 - 177.9009133222098*pc2 +
+    519.7927665148462*pc3 - 348.9193887088235*pc4 +
+    553.1929867183799*pc5 - 1097.44051376129*pc6 -
+    551.5619324306123*pc7 - 1156.466033104612*pc8 +
+    131.1624098219012*pc9 + 2399.353371257881*pc10 +
+    381.9883432629404*pc11
+twoN constrained twoNgbecnw = 226884.9607843137 +
+    7994.439909430889*pc1 - 883.3455140325608*pc2 -
+    1575.728943178362*pc3 - 5198.431643499292*pc4 +
+    3001.754255051523*pc5 - 9510.819817779557*pc6 +
+    11870.46334381847*pc7 - 6547.038892991252*pc8 -
+    199.5564814420416*pc9 - 1073.77832857328*pc10 -
+    249.6263924321441*pc11
+mixFrac constrained m = 0.1600766078431373 - 0.009058628552466816*pc1 +
+    0.002154280950019443*pc2 + 0.001157468044406619*pc3 +
+    0.005901737304648686*pc4 - 0.004455718690846042*pc5 +
+    0.008233595029932386*pc6 + 0.008960777450953477*pc7 -
+    0.01336382730803458*pc8 + 0.0002117281740868154*pc9 -
+    0.004153657652921929*pc10 - 0.00091556009212991*pc11
+time    fixed   zero = 0
+twoN    fixed   one = 1
+time    fixed   Tbecnw = 75200
+time	constrained	Ta = 0.5*(Tbecnw + Tnw)
+segment g	t=Ta	twoN=one	# ghost
+segment b	t=zero  twoN=one        samples=1	# paniscus
+segment b2	t=Ta	twoN=twoNb
+segment e	t=zero  twoN=one        samples=1	# schweinfurthii
+segment c	t=zero  twoN=one        samples=1	# troglodytes
+segment n	t=zero  twoN=one        samples=1	# ellioti
+segment w	t=zero  twoN=one        samples=1	# verus
+segment ec	t=Tec   twoN=twoNec
+segment nw	t=Tnw   twoN=twoNnw
+segment ecnw    t=Tecnw twoN=twoNecnw
+segment becnw   t=Tbecnw	twoN=twoNbecnw
+segment gbecnw	t=Tgbecnw	twoN=twoNgbecnw
+mix b from b2 + m*g
+derive g from gbecnw
+derive b2 from becnw
+derive e from ec
+derive c from ec
+derive n from nw
+derive w from nw
+derive ec from ecnw
+derive nw from ecnw
+derive ecnw from becnw
+derive becnw from gbecnw

@@ -1,0 +1,90 @@
+########################################
+# legofit: estimate population history #
+#       version 2.3.4-4-g53f8760       #
+########################################
+
+# Program was compiled: Sep 21 2021 14:36:42
+# Program was run: Wed Sep 22 10:52:41 2021
+
+# cmd: legofit -1 -d 0 -t 32 --ptsPerDim 3 --stateOut a1boot23.state --tol 3e-6 -S 5000 c.lgo ../../chrX/boot_chrX/boot23.opf
+# Stage nOptItr nSimReps
+#     0    5000        0
+# algorithm          : deterministic
+# ignoring probs <=  : 0
+# Branch length floor: 0
+# DE strategy        : 2
+#    F               : 0.3
+#    CR              : 0.8
+#    tolerance       : 3e-06
+# nthreads           : 30
+# lgo input file     : c.lgo
+# site pat input file: ../../chrX/boot_chrX/boot23.opf
+# free parameters    : 10
+# points in DE swarm : 30
+# output state file  : a1boot23.state
+# Including singleton site patterns.
+# cost function      : KL
+Initial parameter values
+Fixed:
+      zero = 0
+       one = 1
+    Tbecnw = 75200
+Free:
+     Tecnw = 23540
+       Tnw = 6420
+       Tec = 10000
+     twoNe = 10000
+     twoNn = 10000
+    twoNec = 10000
+    twoNnw = 10000
+  twoNecnw = 15000
+  twoNbecnw = 20000
+        m3 = 0.01
+Constrained:
+        Tc = 3210
+DiffEv reached_goal. cost=3.19465e-03 spread=2.79216e-06
+Fitted parameter values
+Free:
+     Tecnw = 31965
+       Tnw = 15141.3
+       Tec = 12406.9
+     twoNe = 33445.3
+     twoNn = 60968.6
+    twoNec = 110938
+    twoNnw = 54444
+  twoNecnw = 33704
+  twoNbecnw = 49573.2
+        m3 = 0.14833
+Constrained:
+        Tc = 7570.64
+#       SitePat  BranchLen
+              b 117178.3966436
+              e 44481.2256171
+              c 45264.3744938
+              n 41873.7136470
+              w 44059.2944287
+            b:e 1295.9074209
+            b:c 1334.2607030
+            b:n 1092.6223575
+            b:w 1240.8185320
+            e:c 10866.4143053
+            e:n 4665.4233132
+            e:w 3524.8667268
+            c:n 3882.2744365
+            c:w 3710.4959011
+            n:w 12132.6226262
+          b:e:c 1420.2514063
+          b:e:n 624.6316932
+          b:e:w 586.2784112
+          b:c:n 586.2784112
+          b:c:w 624.6316932
+          b:n:w 1420.2514063
+          e:c:n 5474.2275389
+          e:c:w 4600.9818791
+          e:n:w 5770.5069928
+          c:n:w 5584.8778185
+        b:e:c:n 1240.8185320
+        b:e:c:w 1092.6223575
+        b:e:n:w 1334.2607030
+        b:c:n:w 1295.9074209
+        e:c:n:w 45389.5207945

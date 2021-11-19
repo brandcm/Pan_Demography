@@ -1,0 +1,90 @@
+########################################
+# legofit: estimate population history #
+#            version 2.3.3             #
+########################################
+
+# Program was compiled: Sep 12 2021 17:54:39
+# Program was run: Tue Sep 21 11:16:41 2021
+
+# cmd: legofit -1 -d 0 -t 32 --ptsPerDim 3 --stateOut a1boot42.state --tol 3e-6 -S 5000 e.lgo ../../chrX/boot_chrX/boot42.opf
+# Stage nOptItr nSimReps
+#     0    5000        0
+# algorithm          : deterministic
+# ignoring probs <=  : 0
+# Branch length floor: 0
+# DE strategy        : 2
+#    F               : 0.3
+#    CR              : 0.8
+#    tolerance       : 3e-06
+# nthreads           : 30
+# lgo input file     : e.lgo
+# site pat input file: ../../chrX/boot_chrX/boot42.opf
+# free parameters    : 10
+# points in DE swarm : 30
+# output state file  : a1boot42.state
+# Including singleton site patterns.
+# cost function      : KL
+Initial parameter values
+Fixed:
+      zero = 0
+       one = 1
+    Tbecnw = 75200
+Free:
+     Tecnw = 23540
+       Tnw = 6420
+       Tec = 10000
+     twoNe = 10000
+     twoNw = 10000
+    twoNec = 10000
+    twoNnw = 10000
+  twoNecnw = 15000
+  twoNbecnw = 20000
+        m5 = 0.01
+Constrained:
+        Te = 3210
+DiffEv reached_goal. cost=3.77475e-03 spread=2.90385e-06
+Fitted parameter values
+Free:
+     Tecnw = 30590.4
+       Tnw = 13462.2
+       Tec = 23442.5
+     twoNe = 4551.27
+     twoNw = 64447.2
+    twoNec = 36245
+    twoNnw = 69236
+  twoNecnw = 34249
+  twoNbecnw = 48764.3
+        m5 = 0.107727
+Constrained:
+        Te = 6731.11
+#       SitePat  BranchLen
+              b 116613.3151983
+              e 43941.7657475
+              c 45657.1669635
+              n 42363.3217822
+              w 41975.7144692
+            b:e 1206.9422489
+            b:c 1329.7012783
+            b:n 1146.1626149
+            b:w 1127.7309920
+            e:c 10017.5759289
+            e:n 3954.7432852
+            e:w 4342.3505982
+            c:n 3727.7776802
+            c:w 3634.9171173
+            n:w 11904.3782668
+          b:e:c 1363.9370988
+          b:e:n 579.0341179
+          b:e:w 597.4657408
+          b:c:n 597.4657408
+          b:c:w 579.0341179
+          b:n:w 1363.9370988
+          e:c:n 4963.9550280
+          e:c:w 5056.8155909
+          e:n:w 6144.0322663
+          c:n:w 5363.0301363
+        b:e:c:n 1127.7309920
+        b:e:c:w 1146.1626149
+        b:e:n:w 1329.7012783
+        b:c:n:w 1206.9422489
+        e:c:n:w 45543.0508447

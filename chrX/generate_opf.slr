@@ -1,0 +1,36 @@
+#!/bin/bash
+#SBATCH -J sitepat_chrX
+#SBATCH --account=rogersa
+#SBATCH --partition=lonepeak
+#SBATCH --time=36:00:00
+#SBATCH --nodes 1
+#SBATCH --ntasks 1
+#SBATCH -o pan_chrX.opf # stdout
+#SBATCH -e pan_chrX.err # stderr
+#SBATCH --mail-type=END,FAIL
+#SBATCH --mail-user=cbrand2@uoregon.edu
+
+
+# uncompress raf files
+gunzip -c ppn_chrX.raf.gz > ppn_chrX.raf
+gunzip -c pte_chrX.raf.gz > pte_chrX.raf
+gunzip -c pts_chrX.raf.gz > pts_chrX.raf
+gunzip -c ptt_chrX.raf.gz > ptt_chrX.raf
+gunzip -c ptv_chrX.raf.gz > ptv_chrX.raf
+gunzip -c hss_chrX.raf.gz > hss_chrX.raf
+
+echo "finished decompression" 1>&2
+
+# make directory for bootstraps
+mkdir boot_chrX
+
+# create observed pattern frequency (.opf) file and bootstrap replicates
+sitepat -1 --bootfile boot_chrX/boot --bootreps 50 \
+	b=ppn_chrX.raf \
+	e=pts_chrX.raf \
+	c=ptt_chrX.raf \
+	n=pte_chrX.raf \
+	w=ptv_chrX.raf \
+	outgroup=hss_chrX.raf
+
+echo "finished sitepat" 1>&2

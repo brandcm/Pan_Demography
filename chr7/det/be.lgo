@@ -1,0 +1,44 @@
+# .lgo file
+# be2
+time    fixed   zero = 0
+twoN    fixed   one = 1
+time    fixed   Tbecnw = 75200
+time    free    Tecnw = 23540
+time    free    Tnw = 10000
+time    free    Tec = 6420
+time	constrained	Tb = 0.5*(Tecnw + Tec)
+time	constrained	Te = 0.5*Tec
+twoN	free	twoNb = 10000
+twoN	free	twoNe = 10000
+twoN	free	twoNw = 10000
+twoN    free    twoNec = 10000
+twoN    free    twoNnw = 10000
+twoN    free    twoNecnw = 15000
+twoN    free    twoNbecnw = 20000
+mixFrac free	m2 = 0.01
+mixFrac	free	m5 = 0.01
+segment b	t=zero  twoN=one        samples=1	# paniscus
+segment b2	t=Tb	twoN=twoNb
+segment e	t=zero  twoN=one        samples=1	# schweinfurthii
+segment	e2	t=Te	twoN=twoNe
+segment c	t=zero  twoN=one        samples=1	# troglodytes
+segment n	t=zero  twoN=one        samples=1	# ellioti
+segment w	t=zero  twoN=one        samples=1	# verus
+segment	w2	t=Te	twoN=twoNw
+segment ec	t=Tec   twoN=twoNec
+segment	ec2	t=Tb	twoN=twoNec
+segment nw	t=Tnw   twoN=twoNnw
+segment ecnw    t=Tecnw twoN=twoNecnw
+segment becnw   t=Tbecnw	twoN=twoNbecnw
+mix ec from ec2 + m2*b2
+mix e from e2 + m5*w2
+derive b from b2
+derive b2 from becnw
+derive e2 from ec
+derive c from ec
+derive n from nw
+derive w from w2
+derive w2 from nw
+derive ec2 from ecnw
+derive nw from ecnw
+derive ecnw from becnw

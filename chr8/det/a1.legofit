@@ -1,0 +1,96 @@
+########################################
+# legofit: estimate population history #
+#       version 2.3.4-4-g53f8760       #
+########################################
+
+# Program was compiled: Sep 21 2021 14:36:42
+# Program was run: Sun Oct 31 09:48:24 2021
+
+# cmd: legofit -1 -d 0 -t 32 --ptsPerDim 3 --stateOut a1.state --tol 3e-6 -S 5000 be.lgo ../pan_chr8.opf
+# Stage nOptItr nSimReps
+#     0    5000        0
+# algorithm          : deterministic
+# ignoring probs <=  : 0
+# Branch length floor: 0
+# DE strategy        : 2
+#    F               : 0.3
+#    CR              : 0.8
+#    tolerance       : 3e-06
+# nthreads           : 32
+# lgo input file     : be.lgo
+# site pat input file: ../pan_chr8.opf
+# free parameters    : 12
+# points in DE swarm : 36
+# output state file  : a1.state
+# Including singleton site patterns.
+# cost function      : KL
+Initial parameter values
+Fixed:
+      zero = 0
+       one = 1
+    Tbecnw = 75200
+Free:
+     Tecnw = 23540
+       Tnw = 10000
+       Tec = 6420
+     twoNb = 10000
+     twoNe = 10000
+     twoNw = 10000
+    twoNec = 10000
+    twoNnw = 10000
+  twoNecnw = 15000
+  twoNbecnw = 20000
+        m2 = 0.01
+        m5 = 0.01
+Constrained:
+        Tb = 14980
+        Te = 3210
+DiffEv reached_goal. cost=4.14179e-03 spread=2.73084e-06
+Fitted parameter values
+Free:
+     Tecnw = 31688.2
+       Tnw = 13738.4
+       Tec = 27012.5
+     twoNb = 99185.1
+     twoNe = 69366.2
+     twoNw = 109481
+    twoNec = 40170.1
+    twoNnw = 83378.8
+  twoNecnw = 40475.8
+  twoNbecnw = 64217.7
+        m2 = 0.00232996
+        m5 = 0.137268
+Constrained:
+        Tb = 29350.4
+        Te = 13506.3
+#       SitePat  BranchLen
+              b 126881.5526752
+              e 49985.4031438
+              c 51817.5715845
+              n 46608.8994488
+              w 46597.7100028
+            b:e 2196.5416696
+            b:c 2403.7842369
+            b:n 1861.4186188
+            b:w 1860.5631662
+            e:c 10138.5535585
+            e:n 5505.9048241
+            e:w 5517.0942702
+            c:n 5039.0382948
+            c:w 5035.8256124
+            n:w 12991.1024204
+          b:e:c 2045.1033822
+          b:e:n 1081.4016782
+          b:e:w 1082.2571307
+          b:c:n 1082.6065485
+          b:c:w 1081.7496191
+          b:n:w 2035.0646165
+          e:c:n 6012.8272566
+          e:c:w 6016.0399389
+          e:n:w 7978.7551524
+          c:n:w 7084.1973926
+        b:e:c:n 1865.2940152
+        b:e:c:w 1866.1509446
+        b:e:n:w 2342.2321180
+        b:c:n:w 2144.8166980
+        e:c:n:w 48196.9780349

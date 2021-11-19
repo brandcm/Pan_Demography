@@ -1,0 +1,88 @@
+########################################
+# legofit: estimate population history #
+#       version 2.3.4-4-g53f8760       #
+########################################
+
+# Program was compiled: Sep 21 2021 14:36:42
+# Program was run: Sat Oct  9 14:57:10 2021
+
+# cmd: legofit -1 -d 0 -t 32 --ptsPerDim 3 --stateOut a1boot40.state --tol 3e-6 -S 5000 b.lgo ../../boot/boot40.opf
+# Stage nOptItr nSimReps
+#     0    5000        0
+# algorithm          : deterministic
+# ignoring probs <=  : 0
+# Branch length floor: 0
+# DE strategy        : 2
+#    F               : 0.3
+#    CR              : 0.8
+#    tolerance       : 3e-06
+# nthreads           : 27
+# lgo input file     : b.lgo
+# site pat input file: ../../boot/boot40.opf
+# free parameters    : 9
+# points in DE swarm : 27
+# output state file  : a1boot40.state
+# Including singleton site patterns.
+# cost function      : KL
+Initial parameter values
+Fixed:
+      zero = 0
+       one = 1
+    Tbecnw = 75200
+Free:
+     Tecnw = 23540
+       Tnw = 10000
+       Tec = 6420
+     twoNb = 10000
+    twoNec = 10000
+    twoNnw = 10000
+  twoNecnw = 15000
+  twoNbecnw = 20000
+        m2 = 0.01
+Constrained:
+        Tb = 14980
+DiffEv reached_goal. cost=5.77149e-03 spread=2.66831e-06
+Fitted parameter values
+Free:
+     Tecnw = 25231.1
+       Tnw = 13133.9
+       Tec = 16321.3
+     twoNb = 223200
+    twoNec = 94341.4
+    twoNnw = 65436.6
+  twoNecnw = 44451.1
+  twoNbecnw = 60072.1
+        m2 = 0.00694703
+Constrained:
+        Tb = 20776.2
+#       SitePat  BranchLen
+              b 123717.2499710
+              e 46211.7558345
+              c 46211.7558345
+              n 42968.1653973
+              w 42968.1653973
+            b:e 2151.5606747
+            b:c 2151.5606747
+            b:n 1711.9817035
+            b:w 1711.9817035
+            e:c 10682.4256488
+            e:n 5388.6317959
+            e:w 5388.6317959
+            c:n 5388.6317959
+            c:w 5388.6317959
+            n:w 12695.2139725
+          b:e:c 1843.4019831
+          b:e:n 988.0936017
+          b:e:w 988.0936017
+          b:c:n 988.0936017
+          b:c:w 988.0936017
+          b:n:w 1826.3561612
+          e:c:n 6192.4227803
+          e:c:w 6192.4227803
+          e:n:w 7556.0919418
+          c:n:w 7556.0919418
+        b:e:c:n 1720.1115000
+        b:e:c:w 1720.1115000
+        b:e:n:w 2043.8692452
+        b:c:n:w 2043.8692452
+        e:c:n:w 47526.8040847

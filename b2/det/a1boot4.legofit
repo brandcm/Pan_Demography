@@ -1,0 +1,88 @@
+########################################
+# legofit: estimate population history #
+#       version 2.3.4-4-g53f8760       #
+########################################
+
+# Program was compiled: Sep 21 2021 14:36:42
+# Program was run: Sat Oct  9 14:56:39 2021
+
+# cmd: legofit -1 -d 0 -t 32 --ptsPerDim 3 --stateOut a1boot4.state --tol 3e-6 -S 5000 b.lgo ../../boot/boot4.opf
+# Stage nOptItr nSimReps
+#     0    5000        0
+# algorithm          : deterministic
+# ignoring probs <=  : 0
+# Branch length floor: 0
+# DE strategy        : 2
+#    F               : 0.3
+#    CR              : 0.8
+#    tolerance       : 3e-06
+# nthreads           : 27
+# lgo input file     : b.lgo
+# site pat input file: ../../boot/boot4.opf
+# free parameters    : 9
+# points in DE swarm : 27
+# output state file  : a1boot4.state
+# Including singleton site patterns.
+# cost function      : KL
+Initial parameter values
+Fixed:
+      zero = 0
+       one = 1
+    Tbecnw = 75200
+Free:
+     Tecnw = 23540
+       Tnw = 10000
+       Tec = 6420
+     twoNb = 10000
+    twoNec = 10000
+    twoNnw = 10000
+  twoNecnw = 15000
+  twoNbecnw = 20000
+        m2 = 0.01
+Constrained:
+        Tb = 14980
+DiffEv reached_goal. cost=4.33725e-03 spread=2.38754e-06
+Fitted parameter values
+Free:
+     Tecnw = 30898.8
+       Tnw = 21135.4
+       Tec = 18516.8
+     twoNb = 120507
+    twoNec = 111088
+    twoNnw = 45984.4
+  twoNecnw = 39373.1
+  twoNbecnw = 66856.5
+        m2 = 0.00377294
+Constrained:
+        Tb = 24707.8
+#       SitePat  BranchLen
+              b 129432.3279073
+              e 49792.0366693
+              c 49792.0366693
+              n 47010.5085042
+              w 47010.5085042
+            b:e 2319.8331792
+            b:c 2319.8331792
+            b:n 1872.2619447
+            b:w 1872.2619447
+            e:c 11120.6633514
+            e:n 4992.7443266
+            e:w 4992.7443266
+            c:n 4992.7443266
+            c:w 4992.7443266
+            n:w 12682.1849158
+          b:e:c 2134.4404110
+          b:e:n 1048.9882184
+          b:e:w 1048.9882184
+          b:c:n 1048.9882184
+          b:c:w 1048.9882184
+          b:n:w 2117.5274808
+          e:c:n 6141.6562796
+          e:c:w 6141.6562796
+          e:n:w 7482.8796676
+          c:n:w 7482.8796676
+        b:e:c:n 1879.8170425
+        b:e:c:w 1879.8170425
+        b:e:n:w 2223.0844201
+        b:c:n:w 2223.0844201
+        e:c:n:w 51270.8924129

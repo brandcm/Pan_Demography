@@ -1,0 +1,96 @@
+########################################
+# legofit: estimate population history #
+#       version 2.3.4-4-g53f8760       #
+########################################
+
+# Program was compiled: Sep 21 2021 14:36:42
+# Program was run: Sun Oct 31 09:48:46 2021
+
+# cmd: legofit -1 -d 0 -t 32 --ptsPerDim 3 --stateOut a1boot19.state --tol 3e-6 -S 5000 be.lgo ../boot_chr8/boot19.opf
+# Stage nOptItr nSimReps
+#     0    5000        0
+# algorithm          : deterministic
+# ignoring probs <=  : 0
+# Branch length floor: 0
+# DE strategy        : 2
+#    F               : 0.3
+#    CR              : 0.8
+#    tolerance       : 3e-06
+# nthreads           : 32
+# lgo input file     : be.lgo
+# site pat input file: ../boot_chr8/boot19.opf
+# free parameters    : 12
+# points in DE swarm : 36
+# output state file  : a1boot19.state
+# Including singleton site patterns.
+# cost function      : KL
+Initial parameter values
+Fixed:
+      zero = 0
+       one = 1
+    Tbecnw = 75200
+Free:
+     Tecnw = 23540
+       Tnw = 10000
+       Tec = 6420
+     twoNb = 10000
+     twoNe = 10000
+     twoNw = 10000
+    twoNec = 10000
+    twoNnw = 10000
+  twoNecnw = 15000
+  twoNbecnw = 20000
+        m2 = 0.01
+        m5 = 0.01
+Constrained:
+        Tb = 14980
+        Te = 3210
+DiffEv reached_goal. cost=3.96969e-03 spread=2.88950e-06
+Fitted parameter values
+Free:
+     Tecnw = 35618.8
+       Tnw = 19781.6
+       Tec = 24575.4
+     twoNb = 82855.4
+     twoNe = 82032.7
+     twoNw = 68854.5
+    twoNec = 99837.9
+    twoNnw = 64448.9
+  twoNecnw = 36780.3
+  twoNbecnw = 69716.3
+        m2 = 2.25712e-05
+        m5 = 0.117032
+Constrained:
+        Tb = 30097.1
+        Te = 12287.7
+#       SitePat  BranchLen
+              b 131560.1111830
+              e 52594.2177248
+              c 54642.3786475
+              n 49355.7904325
+              w 48891.1796796
+            b:e 2334.9214725
+            b:c 2574.4243677
+            b:n 1975.7283110
+            b:w 1938.3388511
+            e:c 10351.4089439
+            e:n 5108.2973946
+            e:w 5572.9081475
+            c:n 4886.3298252
+            c:w 4757.0567335
+            n:w 13037.3074119
+          b:e:c 2250.6688824
+          b:e:n 1122.3424491
+          b:e:w 1159.7319089
+          b:c:n 1159.7356986
+          b:c:w 1122.3455302
+          b:n:w 2250.5497553
+          e:c:n 5825.1698028
+          e:c:w 5954.4428945
+          e:n:w 8204.7855146
+          c:n:w 7194.3390033
+        b:e:c:n 1938.3937708
+        b:e:c:w 1975.7839392
+        b:e:n:w 2573.7086699
+        b:c:n:w 2334.3034758
+        e:c:n:w 51304.3067501

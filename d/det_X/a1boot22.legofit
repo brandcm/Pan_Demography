@@ -1,0 +1,90 @@
+########################################
+# legofit: estimate population history #
+#       version 2.3.4-4-g53f8760       #
+########################################
+
+# Program was compiled: Sep 21 2021 14:36:42
+# Program was run: Wed Sep 22 09:47:59 2021
+
+# cmd: legofit -1 -d 0 -t 32 --ptsPerDim 3 --stateOut a1boot22.state --tol 3e-6 -S 5000 d.lgo ../../chrX/boot_chrX/boot22.opf
+# Stage nOptItr nSimReps
+#     0    5000        0
+# algorithm          : deterministic
+# ignoring probs <=  : 0
+# Branch length floor: 0
+# DE strategy        : 2
+#    F               : 0.3
+#    CR              : 0.8
+#    tolerance       : 3e-06
+# nthreads           : 30
+# lgo input file     : d.lgo
+# site pat input file: ../../chrX/boot_chrX/boot22.opf
+# free parameters    : 10
+# points in DE swarm : 30
+# output state file  : a1boot22.state
+# Including singleton site patterns.
+# cost function      : KL
+Initial parameter values
+Fixed:
+      zero = 0
+       one = 1
+    Tbecnw = 75200
+Free:
+     Tecnw = 23540
+       Tnw = 6420
+       Tec = 10000
+     twoNb = 10000
+     twoNc = 10000
+    twoNec = 10000
+    twoNnw = 10000
+  twoNecnw = 15000
+  twoNbecnw = 20000
+        m4 = 0.01
+Constrained:
+        Td = 5000
+DiffEv reached_goal. cost=3.85850e-03 spread=2.53895e-06
+Fitted parameter values
+Free:
+     Tecnw = 26224.6
+       Tnw = 18165.3
+       Tec = 13203.9
+     twoNb = 211309
+     twoNc = 73023
+    twoNec = 81807.6
+    twoNnw = 33197.3
+  twoNecnw = 37007.9
+  twoNbecnw = 41973
+        m4 = 0.0142463
+Constrained:
+        Td = 6601.93
+#       SitePat  BranchLen
+              b 110507.1701788
+              e 41606.3557228
+              c 42065.6627684
+              n 39986.1591106
+              w 39986.1591106
+            b:e 1086.2252592
+            b:c 1479.9857043
+            b:n 956.5032357
+            b:w 956.5032357
+            e:c 10500.9367079
+            e:n 3867.5954994
+            e:w 3867.5954994
+            c:n 3758.3805142
+            c:w 3758.3805142
+            n:w 11476.4493345
+          b:e:c 1177.6679849
+          b:e:n 498.7235920
+          b:e:w 498.7235920
+          b:c:n 504.4933463
+          b:c:w 504.4933463
+          b:n:w 1168.7274386
+          e:c:n 4854.5924563
+          e:c:w 4854.5924563
+          e:n:w 6157.8974294
+          c:n:w 5608.4914271
+        b:e:c:n 962.2729900
+        b:e:c:w 962.2729900
+        b:e:n:w 1191.9368320
+        b:c:n:w 1095.1658055
+        e:c:n:w 41463.4765197

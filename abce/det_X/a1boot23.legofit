@@ -1,0 +1,110 @@
+########################################
+# legofit: estimate population history #
+#            version 2.3.3             #
+########################################
+
+# Program was compiled: Sep 12 2021 17:54:39
+# Program was run: Tue Sep 14 23:17:35 2021
+
+# cmd: legofit -1 -d 0 -t 32 --ptsPerDim 3 --stateOut a1boot23.state --tol 3e-6 -S 5000 abce.lgo ../../chrX/boot_chrX/boot23.opf
+# Stage nOptItr nSimReps
+#     0    5000        0
+# algorithm          : deterministic
+# ignoring probs <=  : 0
+# Branch length floor: 0
+# DE strategy        : 2
+#    F               : 0.3
+#    CR              : 0.8
+#    tolerance       : 3e-06
+# nthreads           : 32
+# lgo input file     : abce.lgo
+# site pat input file: ../../chrX/boot_chrX/boot23.opf
+# free parameters    : 17
+# points in DE swarm : 51
+# output state file  : a1boot23.state
+# Including singleton site patterns.
+# cost function      : KL
+Initial parameter values
+Fixed:
+      zero = 0
+       one = 1
+    Tbecnw = 75200
+Free:
+   Tgbecnw = 140000
+     Tecnw = 23540
+       Tnw = 6420
+       Tec = 10000
+     twoNb = 10000
+     twoNe = 10000
+     twoNn = 10000
+     twoNw = 10000
+    twoNec = 10000
+    twoNnw = 10000
+  twoNecnw = 15000
+  twoNbecnw = 20000
+  twoNgbecnw = 40000
+         m = 0.026
+        m2 = 0.01
+        m3 = 0.01
+        m5 = 0.01
+Constrained:
+        Tb = 16770
+        Ta = 45985
+        Tc = 3210
+        Te = 1605
+DiffEv reached_goal. cost=2.13984e-03 spread=2.53678e-06
+Fitted parameter values
+Free:
+   Tgbecnw = 189289
+     Tecnw = 27804.2
+       Tnw = 25837.9
+       Tec = 15068.1
+     twoNb = 114744
+     twoNe = 34734.5
+     twoNn = 140702
+     twoNw = 112134
+    twoNec = 59239.2
+    twoNnw = 5408.61
+  twoNecnw = 69779
+  twoNbecnw = 24936.7
+  twoNgbecnw = 333157
+         m = 0.0780197
+        m2 = 0.0159886
+        m3 = 0.212546
+        m5 = 0.0774241
+Constrained:
+        Tb = 21436.2
+        Ta = 48318.1
+        Tc = 12918.9
+        Te = 6459.47
+#       SitePat  BranchLen
+              b 127515.1548277
+              e 47737.0480661
+              c 49761.7564884
+              n 45766.7502295
+              w 48310.0287926
+            b:e 1595.3386956
+            b:c 1768.5882142
+            b:n 1131.0819191
+            b:w 1226.5461730
+            e:c 12434.7775467
+            e:n 5253.2850918
+            e:w 4684.9875102
+            c:n 4845.9205436
+            c:w 3950.0152240
+            n:w 13252.8852886
+          b:e:c 1480.4364480
+          b:e:n 616.7043677
+          b:e:w 628.0396083
+          b:c:n 630.9802257
+          b:c:w 616.4456631
+          b:n:w 1449.0696127
+          e:c:n 5212.6508893
+          e:c:w 4152.5166409
+          e:n:w 6096.3205519
+          c:n:w 5207.0491813
+        b:e:c:n 1275.2377701
+        b:e:c:w 1164.0314412
+        b:e:n:w 1762.4706666
+        b:c:n:w 1593.4390119
+        e:c:n:w 50359.7194317

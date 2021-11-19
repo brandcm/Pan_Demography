@@ -1,0 +1,19 @@
+#!/bin/bash
+#SBATCH -J a1
+#SBATCH --account=rogersa-kp
+#SBATCH --partition=rogersa-kp
+#SBATCH --time=2:00:00
+#SBATCH --nodes 1
+#SBATCH --ntasks 1
+#SBATCH -o a1.legofit # stdout
+#SBATCH -e a1.err # stderr
+#SBATCH --mail-type=END,FAIL
+#SBATCH --mail-user=cbrand2@uoregon.edu
+
+improbable=0
+ifile=../../pan.opf
+stateout=a1.state
+lgofile=be.lgo
+threads=32
+
+legofit -1 -d $improbable -t $threads --ptsPerDim 3 --stateOut $stateout --tol 3e-6 -S 5000 $lgofile $ifile

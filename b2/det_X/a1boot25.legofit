@@ -1,0 +1,88 @@
+########################################
+# legofit: estimate population history #
+#       version 2.3.4-4-g53f8760       #
+########################################
+
+# Program was compiled: Sep 21 2021 14:36:42
+# Program was run: Sun Oct 10 13:08:48 2021
+
+# cmd: legofit -1 -d 0 -t 32 --ptsPerDim 3 --stateOut a1boot25.state --tol 3e-6 -S 5000 b.lgo ../../chrX/boot_chrX/boot25.opf
+# Stage nOptItr nSimReps
+#     0    5000        0
+# algorithm          : deterministic
+# ignoring probs <=  : 0
+# Branch length floor: 0
+# DE strategy        : 2
+#    F               : 0.3
+#    CR              : 0.8
+#    tolerance       : 3e-06
+# nthreads           : 27
+# lgo input file     : b.lgo
+# site pat input file: ../../chrX/boot_chrX/boot25.opf
+# free parameters    : 9
+# points in DE swarm : 27
+# output state file  : a1boot25.state
+# Including singleton site patterns.
+# cost function      : KL
+Initial parameter values
+Fixed:
+      zero = 0
+       one = 1
+    Tbecnw = 75200
+Free:
+     Tecnw = 23540
+       Tnw = 10000
+       Tec = 6420
+     twoNb = 10000
+    twoNec = 10000
+    twoNnw = 10000
+  twoNecnw = 15000
+  twoNbecnw = 20000
+        m2 = 0.01
+Constrained:
+        Tb = 14980
+DiffEv reached_goal. cost=4.18788e-03 spread=2.90409e-06
+Fitted parameter values
+Free:
+     Tecnw = 26590.6
+       Tnw = 14929.2
+       Tec = 18636.3
+     twoNb = 30081.2
+    twoNec = 52063.3
+    twoNnw = 48368.7
+  twoNecnw = 37045.9
+  twoNbecnw = 45451.8
+        m2 = 6.20534e-05
+Constrained:
+        Tb = 22613.5
+#       SitePat  BranchLen
+              b 113762.2523561
+              e 42536.7655123
+              c 42536.7655123
+              n 40087.0333934
+              w 40087.0333934
+            b:e 1203.8598878
+            b:c 1203.8598878
+            b:n 1052.3129360
+            b:w 1052.3129360
+            e:c 10315.5491955
+            e:n 3919.1986198
+            e:w 3919.1986198
+            c:n 3919.1986198
+            c:w 3919.1986198
+            n:w 11938.7116868
+          b:e:c 1276.5672540
+          b:e:n 550.2571018
+          b:e:w 550.2571018
+          b:c:n 550.2571018
+          b:c:w 550.2571018
+          b:n:w 1276.0460511
+          e:c:n 5048.4698702
+          e:c:w 5048.4698702
+          e:n:w 5879.0904206
+          c:n:w 5879.0904206
+        b:e:c:n 1052.4772085
+        b:e:c:w 1052.4772085
+        b:e:n:w 1200.4944405
+        b:c:n:w 1200.4944405
+        e:c:n:w 43981.0507025

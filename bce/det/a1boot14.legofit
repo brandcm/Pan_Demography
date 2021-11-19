@@ -1,0 +1,102 @@
+########################################
+# legofit: estimate population history #
+#       version 2.3.4-4-g53f8760       #
+########################################
+
+# Program was compiled: Sep 21 2021 14:36:42
+# Program was run: Wed Sep 22 15:51:23 2021
+
+# cmd: legofit -1 -d 0 -t 32 --ptsPerDim 3 --stateOut a1boot14.state --tol 3e-6 -S 5000 bce.lgo ../../boot/boot14.opf
+# Stage nOptItr nSimReps
+#     0    5000        0
+# algorithm          : deterministic
+# ignoring probs <=  : 0
+# Branch length floor: 0
+# DE strategy        : 2
+#    F               : 0.3
+#    CR              : 0.8
+#    tolerance       : 3e-06
+# nthreads           : 32
+# lgo input file     : bce.lgo
+# site pat input file: ../../boot/boot14.opf
+# free parameters    : 14
+# points in DE swarm : 42
+# output state file  : a1boot14.state
+# Including singleton site patterns.
+# cost function      : KL
+Initial parameter values
+Fixed:
+      zero = 0
+       one = 1
+    Tbecnw = 75200
+Free:
+     Tecnw = 23540
+       Tnw = 6420
+       Tec = 10000
+     twoNb = 10000
+     twoNe = 10000
+     twoNn = 10000
+     twoNw = 10000
+    twoNec = 10000
+    twoNnw = 10000
+  twoNecnw = 15000
+  twoNbecnw = 20000
+        m2 = 0.01
+        m3 = 0.01
+        m5 = 0.01
+Constrained:
+        Tb = 16770
+        Tc = 3210
+        Te = 1605
+DiffEv reached_goal. cost=3.61201e-03 spread=2.97116e-06
+Fitted parameter values
+Free:
+     Tecnw = 33957.6
+       Tnw = 17177.6
+       Tec = 21819.5
+     twoNb = 143912
+     twoNe = 72104.8
+     twoNn = 48085.4
+     twoNw = 344812
+    twoNec = 67498.8
+    twoNnw = 61074.8
+  twoNecnw = 37307.7
+  twoNbecnw = 68094.5
+        m2 = 0.00801809
+        m3 = 0.110814
+        m5 = 0.16569
+Constrained:
+        Tb = 27888.6
+        Tc = 8588.81
+        Te = 4294.41
+#       SitePat  BranchLen
+              b 130382.1761433
+              e 48790.1830184
+              c 52018.2090535
+              n 46579.6396919
+              w 47762.9855777
+            b:e 2210.7406900
+            b:c 2596.5582552
+            b:n 1841.3318814
+            b:w 1958.5981934
+            e:c 10938.0823319
+            e:n 5768.9775284
+            e:w 5405.4892239
+            c:n 4830.7122765
+            c:w 4604.6547449
+            n:w 12968.8164487
+          b:e:c 2164.7818350
+          b:e:n 1066.0696115
+          b:e:w 1057.3131206
+          b:c:n 1060.4039317
+          b:c:w 1063.0808074
+          b:n:w 2135.1737830
+          e:c:n 6372.1342761
+          e:c:w 5801.4969186
+          e:n:w 8230.8696914
+          c:n:w 6707.3104211
+        b:e:c:n 1972.4064455
+        b:e:c:w 1838.0570566
+        b:e:n:w 2434.0423667
+        b:c:n:w 2082.7557606
+        e:c:n:w 51812.8457672

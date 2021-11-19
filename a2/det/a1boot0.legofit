@@ -1,0 +1,92 @@
+########################################
+# legofit: estimate population history #
+#       version 2.3.4-4-g53f8760       #
+########################################
+
+# Program was compiled: Sep 21 2021 14:36:42
+# Program was run: Sat Oct  9 17:11:32 2021
+
+# cmd: legofit -1 -d 0 -t 32 --ptsPerDim 3 --stateOut a1boot0.state --tol 3e-6 -S 5000 a.lgo ../../boot/boot0.opf
+# Stage nOptItr nSimReps
+#     0    5000        0
+# algorithm          : deterministic
+# ignoring probs <=  : 0
+# Branch length floor: 0
+# DE strategy        : 2
+#    F               : 0.3
+#    CR              : 0.8
+#    tolerance       : 3e-06
+# nthreads           : 32
+# lgo input file     : a.lgo
+# site pat input file: ../../boot/boot0.opf
+# free parameters    : 11
+# points in DE swarm : 33
+# output state file  : a1boot0.state
+# Including singleton site patterns.
+# cost function      : KL
+Initial parameter values
+Fixed:
+      zero = 0
+       one = 1
+    Tbecnw = 75200
+Free:
+   Tgbecnw = 140000
+     Tecnw = 23540
+       Tnw = 10000
+       Tec = 6420
+     twoNb = 10000
+    twoNec = 10000
+    twoNnw = 10000
+  twoNecnw = 15000
+  twoNbecnw = 20000
+  twoNgbecnw = 40000
+         m = 0.026
+Constrained:
+        Ta = 40810
+DiffEv reached_goal. cost=2.73657e-03 spread=2.90399e-06
+Fitted parameter values
+Free:
+   Tgbecnw = 465847
+     Tecnw = 33353.3
+       Tnw = 23661.7
+       Tec = 23369.8
+     twoNb = 67501.2
+    twoNec = 128916
+    twoNnw = 46040.2
+  twoNecnw = 74753.8
+  twoNbecnw = 56151.6
+  twoNgbecnw = 85233.4
+         m = 0.100603
+Constrained:
+        Ta = 49284.9
+#       SitePat  BranchLen
+              b 157065.7312759
+              e 62875.6027830
+              c 62875.6027830
+              n 57787.4698071
+              w 57787.4698071
+            b:e 3010.7602455
+            b:c 3010.7602455
+            b:n 2455.8011180
+            b:w 2455.8011180
+            e:c 12535.1505319
+            e:n 6322.9440955
+            e:w 6322.9440955
+            c:n 6322.9440955
+            c:w 6322.9440955
+            n:w 15850.3065821
+          b:e:c 2715.9710049
+          b:e:n 1443.5960581
+          b:e:w 1443.5960581
+          b:c:n 1443.5960581
+          b:c:w 1443.5960581
+          b:n:w 2715.9174642
+          e:c:n 6134.8043677
+          e:c:w 6134.8043677
+          e:n:w 7907.7812935
+          c:n:w 7907.7812935
+        b:e:c:n 2456.1773195
+        b:e:c:w 2456.1773195
+        b:e:n:w 3011.1899877
+        b:c:n:w 3011.1899877
+        e:c:n:w 65368.3617905

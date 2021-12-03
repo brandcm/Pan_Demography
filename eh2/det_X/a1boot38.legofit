@@ -1,0 +1,94 @@
+########################################
+# legofit: estimate population history #
+#       version 2.3.4-9-g33e7e4f       #
+########################################
+
+# Program was compiled: Nov  5 2021 19:31:52
+# Program was run: Mon Nov 22 22:55:08 2021
+
+# cmd: legofit -1 -d 0 -t 32 --ptsPerDim 3 --stateOut a1boot38.state --tol 3e-6 -S 5000 eh.lgo ../../chrX/boot_chrX/boot38.opf
+# Stage nOptItr nSimReps
+#     0    5000        0
+# algorithm          : deterministic
+# ignoring probs <=  : 0
+# Branch length floor: 0
+# DE strategy        : 2
+#    F               : 0.3
+#    CR              : 0.8
+#    tolerance       : 3e-06
+# nthreads           : 32
+# lgo input file     : eh.lgo
+# site pat input file: ../../chrX/boot_chrX/boot38.opf
+# free parameters    : 11
+# points in DE swarm : 33
+# output state file  : a1boot38.state
+# Including singleton site patterns.
+# cost function      : KL
+Initial parameter values
+Fixed:
+      zero = 0
+       one = 1
+    Tbecnw = 75200
+Free:
+     Tecnw = 23540
+       Tnw = 10000
+       Tec = 6420
+     twoNe = 10000
+     twoNw = 10000
+    twoNec = 10000
+    twoNnw = 10000
+  twoNecnw = 15000
+  twoNbecnw = 20000
+        m5 = 0.01
+        m8 = 0.01
+Constrained:
+        Th = 8210
+        Te = 3210
+DiffEv reached_goal. cost=3.37607e-03 spread=2.73240e-06
+Fitted parameter values
+Free:
+     Tecnw = 36502.1
+       Tnw = 14466.6
+       Tec = 13092.5
+     twoNe = 37201
+     twoNw = 77394.1
+    twoNec = 61984.4
+    twoNnw = 65581.8
+  twoNecnw = 30138.9
+  twoNbecnw = 51127.6
+        m5 = 0.0536767
+        m8 = 0.236867
+Constrained:
+        Th = 13779.6
+        Te = 6546.27
+#       SitePat  BranchLen
+              b 118967.0404547
+              e 44641.1592592
+              c 45485.0245274
+              n 42939.6921604
+              w 42616.1431129
+            b:e 1277.1005714
+            b:c 1340.8873526
+            b:n 1107.6391603
+            b:w 1091.9633443
+            e:c 10777.8686215
+            e:n 4074.5600971
+            e:w 4311.4918385
+            c:n 3962.4173906
+            c:w 3968.7119764
+            n:w 11744.0244794
+          b:e:c 1369.7917828
+          b:e:n 582.2585217
+          b:e:w 590.8742078
+          b:c:n 590.8742078
+          b:c:w 582.2585217
+          b:n:w 1369.7917828
+          e:c:n 4524.3289894
+          e:c:w 4604.6517098
+          e:n:w 6077.9800981
+          c:n:w 5689.0373985
+        b:e:c:n 1091.9633443
+        b:e:c:w 1107.6391603
+        b:e:n:w 1340.8873526
+        b:c:n:w 1277.1005714
+        e:c:n:w 47315.5147819

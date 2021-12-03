@@ -1,0 +1,94 @@
+########################################
+# legofit: estimate population history #
+#       version 2.3.4-9-g33e7e4f       #
+########################################
+
+# Program was compiled: Nov  5 2021 19:31:52
+# Program was run: Mon Nov 22 22:22:48 2021
+
+# cmd: legofit -1 -d 0 -t 32 --ptsPerDim 3 --stateOut a1boot6.state --tol 3e-6 -S 5000 eh.lgo ../../chrX/boot_chrX/boot6.opf
+# Stage nOptItr nSimReps
+#     0    5000        0
+# algorithm          : deterministic
+# ignoring probs <=  : 0
+# Branch length floor: 0
+# DE strategy        : 2
+#    F               : 0.3
+#    CR              : 0.8
+#    tolerance       : 3e-06
+# nthreads           : 32
+# lgo input file     : eh.lgo
+# site pat input file: ../../chrX/boot_chrX/boot6.opf
+# free parameters    : 11
+# points in DE swarm : 33
+# output state file  : a1boot6.state
+# Including singleton site patterns.
+# cost function      : KL
+Initial parameter values
+Fixed:
+      zero = 0
+       one = 1
+    Tbecnw = 75200
+Free:
+     Tecnw = 23540
+       Tnw = 10000
+       Tec = 6420
+     twoNe = 10000
+     twoNw = 10000
+    twoNec = 10000
+    twoNnw = 10000
+  twoNecnw = 15000
+  twoNbecnw = 20000
+        m5 = 0.01
+        m8 = 0.01
+Constrained:
+        Th = 8210
+        Te = 3210
+DiffEv reached_goal. cost=2.87631e-03 spread=2.98377e-06
+Fitted parameter values
+Free:
+     Tecnw = 35958.9
+       Tnw = 12903.1
+       Tec = 12875.8
+     twoNe = 84659.6
+     twoNw = 94280.6
+    twoNec = 58679.2
+    twoNnw = 71449.2
+  twoNecnw = 30867.6
+  twoNbecnw = 49685.3
+        m5 = 0.0576548
+        m8 = 0.237572
+Constrained:
+        Th = 12889.4
+        Te = 6437.88
+#       SitePat  BranchLen
+              b 117612.2785444
+              e 44301.6747668
+              c 45147.6814855
+              n 42589.4735785
+              w 42445.2786357
+            b:e 1250.2598920
+            b:c 1312.9992323
+            b:n 1101.1734004
+            b:w 1094.6335421
+            e:c 10807.3671128
+            e:n 4189.0343021
+            e:w 4331.7626235
+            c:n 4047.0605415
+            c:w 4014.9120373
+            n:w 11797.0397876
+          b:e:c 1345.7208524
+          b:e:n 580.8922297
+          b:e:w 587.3160685
+          b:c:n 587.3160685
+          b:c:w 580.8922297
+          b:n:w 1345.7208524
+          e:c:n 4595.7583864
+          e:c:w 4629.3735119
+          e:n:w 6023.7864793
+          c:n:w 5636.6041075
+        b:e:c:n 1094.6335421
+        b:e:c:w 1101.1734004
+        b:e:n:w 1312.9992323
+        b:c:n:w 1250.2598920
+        e:c:n:w 46006.5165790

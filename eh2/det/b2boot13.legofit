@@ -1,0 +1,116 @@
+########################################
+# legofit: estimate population history #
+#       version 2.3.4-9-g33e7e4f       #
+########################################
+
+# Program was compiled: Nov  5 2021 19:31:52
+# Program was run: Tue Nov 23 00:04:11 2021
+
+# cmd: legofit -1 -d 0 -t 32 --ptsPerDim 3 --tol 3e-6 -S 5000 eh2.lgo ../../boot/boot13.opf --stateIn b1.state --stateIn b1boot0.state --stateIn b1boot1.state --stateIn b1boot10.state --stateIn b1boot11.state --stateIn b1boot12.state --stateIn b1boot13.state --stateIn b1boot14.state --stateIn b1boot15.state --stateIn b1boot16.state --stateIn b1boot17.state --stateIn b1boot18.state --stateIn b1boot19.state --stateIn b1boot2.state --stateIn b1boot20.state --stateIn b1boot21.state --stateIn b1boot22.state --stateIn b1boot23.state --stateIn b1boot24.state --stateIn b1boot25.state --stateIn b1boot26.state --stateIn b1boot27.state --stateIn b1boot28.state --stateIn b1boot29.state --stateIn b1boot3.state --stateIn b1boot30.state --stateIn b1boot31.state --stateIn b1boot32.state --stateIn b1boot33.state --stateIn b1boot34.state --stateIn b1boot35.state --stateIn b1boot36.state --stateIn b1boot37.state --stateIn b1boot38.state --stateIn b1boot39.state --stateIn b1boot4.state --stateIn b1boot40.state --stateIn b1boot41.state --stateIn b1boot42.state --stateIn b1boot43.state --stateIn b1boot44.state --stateIn b1boot45.state --stateIn b1boot46.state --stateIn b1boot47.state --stateIn b1boot48.state --stateIn b1boot49.state --stateIn b1boot5.state --stateIn b1boot6.state --stateIn b1boot7.state --stateIn b1boot8.state --stateIn b1boot9.state
+# Stage nOptItr nSimReps
+#     0    5000        0
+# algorithm          : deterministic
+# ignoring probs <=  : 0
+# Branch length floor: 0
+# DE strategy        : 2
+#    F               : 0.3
+#    CR              : 0.8
+#    tolerance       : 3e-06
+# nthreads           : 32
+# lgo input file     : eh2.lgo
+# site pat input file: ../../boot/boot13.opf
+# free parameters    : 11
+# points in DE swarm : 33
+# input state file(s): b1.state b1boot0.state b1boot1.state b1boot10.state b1boot11.state b1boot12.state b1boot13.state b1boot14.state b1boot15.state b1boot16.state b1boot17.state b1boot18.state b1boot19.state b1boot2.state b1boot20.state b1boot21.state b1boot22.state b1boot23.state b1boot24.state b1boot25.state b1boot26.state b1boot27.state b1boot28.state b1boot29.state b1boot3.state b1boot30.state b1boot31.state b1boot32.state b1boot33.state b1boot34.state b1boot35.state b1boot36.state b1boot37.state b1boot38.state b1boot39.state b1boot4.state b1boot40.state b1boot41.state b1boot42.state b1boot43.state b1boot44.state b1boot45.state b1boot46.state b1boot47.state b1boot48.state b1boot49.state b1boot5.state b1boot6.state b1boot7.state b1boot8.state b1boot9.state
+# Including singleton site patterns.
+# cost function      : KL
+Initial parameter values
+Fixed:
+      zero = 0
+       one = 1
+    Tbecnw = 75200
+Free:
+       pc1 = -3.97045
+       pc2 = 0.368854
+       pc3 = -1.99074
+       pc4 = 0.950084
+       pc5 = -1.7454
+       pc6 = -0.680911
+       pc7 = -0.166502
+       pc8 = 0.0159585
+       pc9 = 0.0482583
+      pc10 = -0.0233499
+      pc11 = -0.00197316
+Constrained:
+     Tecnw = 61480.3
+       Tnw = 5380.97
+       Tec = 5308.09
+     twoNe = 67850.4
+     twoNw = 631012
+    twoNec = 93248.3
+    twoNnw = 147342
+  twoNecnw = 13267.3
+  twoNbecnw = 88093.5
+        m5 = 0.167522
+        m8 = 0.383883
+        Th = 5344.53
+        Te = 2654.04
+DiffEv reached_goal. cost=2.36621e-03 spread=2.51897e-06
+Fitted parameter values
+Free:
+       pc1 = -3.97443
+       pc2 = -0.0894217
+       pc3 = -1.85562
+       pc4 = 0.953866
+       pc5 = -1.93754
+       pc6 = -0.980787
+       pc7 = -0.146912
+       pc8 = 0.061515
+       pc9 = 0.0550887
+      pc10 = -0.0227685
+      pc11 = -0.0299824
+Constrained:
+     Tecnw = 61764.5
+       Tnw = 5454.38
+       Tec = 5445.45
+     twoNe = 64556
+     twoNw = 638303
+    twoNec = 93095.3
+    twoNnw = 146942
+  twoNecnw = 13014.8
+  twoNbecnw = 88619.6
+        m5 = 0.166121
+        m8 = 0.385163
+        Th = 5449.92
+        Te = 2722.72
+#       SitePat  BranchLen
+              b 148305.6479877
+              e 57664.0768382
+              c 60413.4053265
+              n 54635.9847263
+              w 54595.2113995
+            b:e 2696.5002580
+            b:c 3041.1339436
+            b:n 2262.5983585
+            b:w 2260.0366457
+            e:c 12384.0060095
+            e:n 6541.3518471
+            e:w 6581.9449630
+            c:n 5770.7485948
+            c:w 5762.9904911
+            n:w 14522.6696479
+          b:e:c 2604.1964535
+          b:e:n 1323.4674100
+          b:e:w 1326.0097841
+          b:c:n 1326.0097841
+          b:c:w 1323.4674100
+          b:n:w 2604.1964535
+          e:c:n 5338.7374579
+          e:c:w 5346.6757726
+          e:n:w 8207.0713783
+          c:n:w 7047.3006143
+        b:e:c:n 2260.0366457
+        b:e:c:w 2262.5983585
+        b:e:n:w 3041.1339436
+        b:c:n:w 2696.5002580
+        e:c:n:w 61755.7265743

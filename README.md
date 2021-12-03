@@ -31,6 +31,3 @@ msprime and then fit to the model using a deterministic analysis.
 
 - pan.booma and pan_chrX.booma contain the weights for the tested autosomal and
 X chromosome models, respectively
-
-Notes:
-- original eh2 directory was deleted, replacement in progress

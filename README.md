@@ -1,15 +1,15 @@
-This repository contains data, models, and scripts used to run analyses from
-Brand et al. 2021, an analysis of Pan evolutionary history using nucleotide
-site patterns.
+This repository contains data, models, and scripts used to run analyses on
+Pan evolutionary history using nucleotide site patterns by Brand, White, Rogers,
+and Webster.
 
 - Most directories are named by the demographic model used in that analysis.
 a = alpha, b = beta, c = gamma, d = delta, e = epsilon, f = zeta, g = eta,
 and h = theta. Models that end in "2" have a younger divergence time for
-the ancestor of eastern and central chimpanzees, whereas models that do 
-not end in 2 have a younger divergence for the ancestor of Nigeria-Cameroon
-and western chimpanzees. Instances of "r" reflect the model contains a
-reversed direction of the introgression event occurring immediately before
-the letter (e.g., br is the beta event in the reverse direction).
+the eastern and central chimpanzee most recent common ancestor (MRCA), whereas 
+models that do not end in 2 have a younger Nigeria-Cameroon and western chimpanzee
+MRCA. Instances of "r" reflect the model contains a reversed direction of the 
+introgression event occurring immediately before the letter (e.g., br is the 
+beta event in the reverse direction).
 
 - Null and null2 are null demographic models containing no intrgression events
 
@@ -27,7 +27,12 @@ msprime and then fit to the model using a deterministic analysis.
 
 - pan.opf contains the tabulated site patterns and boot contains the bootstrap replicates
 
-- Chr5, chr7, chr8, and chrX contain individual analyses of those site patterns
+- chr5, chr7, chr8, and chrX contain individual analyses of those site patterns
 
 - pan.booma and pan_chrX.booma contain the weights for the tested autosomal and
 X chromosome models, respectively
+
+- figure_generation_and_model_correlation contains the code and data necessary
+to generate most of the manuscript figures and run a correlation between
+autosomal and X chromosome model ranks. The other manuscript figures are demographic
+models and were generated in Inkscape.
